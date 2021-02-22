@@ -31,6 +31,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -127,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "str-angular-project"
+  "defaultProject": "str-angular-project",
+  "cli": {
+    "analytics": "ac4c0722-1e66-4ae8-922e-c99bd05921b0"
+  }
 }
