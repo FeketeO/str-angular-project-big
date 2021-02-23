@@ -25,9 +25,11 @@ productList: BehaviorSubject<Product[]> = this.productService.list$;
     this.productService.remove(product),
     this.router.navigate([''])
   }
+  irany:boolean=false;
 columnKey:string='';
 onColumnSelect(key:string):void{
   this.columnKey=key;
+  this.irany=!this.irany;
 }
 
 onChangePhrase(event:any): void{

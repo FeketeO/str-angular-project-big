@@ -32,7 +32,7 @@
             </thead>
             <tbody>
                 <!-- <tr *ngFor="let product of productList | async | filter:phrase | sorter:columnKey"> -->
-                <tr *ngFor="let product of productList | async">
+                <tr *ngFor="let product of productList | async  | sorter:columnKey:irany">
                     <td>{{product.id}}</td>
                     <td>{{product.name}} </td>
                     <td>{{product.type}}</td>

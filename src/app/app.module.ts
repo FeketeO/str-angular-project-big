@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './page/product-list/product-list.component';
 import { EditProductComponent } from './page/edit-product/edit-product.component';
+import { SorterPipe } from './pipe/sorter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    EditProductComponent
+    EditProductComponent,
+    SorterPipe
   ],
   imports: [
     BrowserModule,
