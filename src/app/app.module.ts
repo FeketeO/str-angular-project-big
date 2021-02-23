@@ -8,6 +8,9 @@ import { ProductListComponent } from './page/product-list/product-list.component
 import { EditProductComponent } from './page/edit-product/edit-product.component';
 import { SorterPipe } from './pipe/sorter.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
+import { SidebarComponent } from './common/sidebar/sidebar.component';
+import { NavbarComponent } from './common/navbar/navbar.component';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { FilterPipe } from './pipe/filter.pipe';
     ProductListComponent,
     EditProductComponent,
     SorterPipe,
-    FilterPipe
+    FilterPipe,
+    SidebarComponent,
+    NavbarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
