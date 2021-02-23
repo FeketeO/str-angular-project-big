@@ -13,7 +13,7 @@ export class SorterPipe implements PipeTransform {
     
       return value.sort(function(a:any,b:any):any{
         if (typeof a[key]==='number' && typeof b[key]==='number'){
-          if (irany===true){
+          if (irany){
             return  a[key]-b[key];
           }else{
            return b[key]-a[key];
@@ -21,7 +21,7 @@ export class SorterPipe implements PipeTransform {
           
         }else
         {
-          if (irany===true){
+          if (irany){
         return (''+a[key]).toLowerCase().localeCompare((''+b[key]).toLowerCase());
 
         }else

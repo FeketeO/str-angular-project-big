@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './page/product-list/product-list.component';
 import { EditProductComponent } from './page/edit-product/edit-product.component';
 import { SorterPipe } from './pipe/sorter.pipe';
+import { FilterPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     EditProductComponent,
-    SorterPipe
+    SorterPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

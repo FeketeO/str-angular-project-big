@@ -4,11 +4,18 @@
             <h3>All products are listed below</h3>
         </div>
 
-        <div class="col-8">
+        <div class="col-5">
             <button class="btn btn-success btn-block" [routerLink]="['product/' + 0]">
                 <i class="fa fa-edit"></i>
                 Create Product
             </button>
+        </div>
+        <div class="col-3 ">
+            <select [(ngModel)]="filterKey" class="form-control">
+                <option *ngFor="let key of filterKeys" [value]="key">
+                    {{ key }}
+                </option>
+            </select>
         </div>
         <div class="col-4">
             <form class="form-inline my-2 my-lg-0">
@@ -32,7 +39,7 @@
             </thead>
             <tbody>
                 <!-- <tr *ngFor="let product of productList | async | filter:phrase | sorter:columnKey"> -->
-                <tr *ngFor="let product of productList | async  | sorter:columnKey:irany">
+                <tr *ngFor="let product of productList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
                     <td>{{product.id}}</td>
                     <td>{{product.name}} </td>
                     <td>{{product.type}}</td>

@@ -17,6 +17,11 @@ productList: BehaviorSubject<Product[]> = this.productService.list$;
     private router:Router,
   ) { }
 
+
+    filterKey: string = 'name';
+  filterKeys: string[] = Object.keys(new Product());
+
+
   ngOnInit(): void {
      this.productService.getAll();
   }
