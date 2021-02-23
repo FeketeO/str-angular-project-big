@@ -8,6 +8,7 @@ import { ProductListComponent } from './page/product-list/product-list.component
 import { EditProductComponent } from './page/edit-product/edit-product.component';
 import { SorterPipe } from './pipe/sorter.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
+import { NavigationComponent } from './common/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FilterPipe } from './pipe/filter.pipe';
     ProductListComponent,
     EditProductComponent,
     SorterPipe,
-    FilterPipe
+    FilterPipe,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
