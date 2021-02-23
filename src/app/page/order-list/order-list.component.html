@@ -4,7 +4,7 @@
             <h3>Orders</h3>
         </div>
         <div class="col-8">
-            <button class="btn btn-success btn-block" [routerLink]="['order/' + 0]">
+            <button class="btn btn-success btn-block" [routerLink]="[0]">
                 <i class="fa fa-edit"></i>
                 Add new order
             </button>
@@ -35,7 +35,7 @@
                     <td>{{order.status}}</td>
                     <td>
                         <div class="btn-group">
-                            <button [routerLink]="['order/' + order.id]" class="btn btn-info">
+                            <button [routerLink]="[order.id]" class="btn btn-info">
                                 <i class="fa fa-pencil"></i>
                             </button>
                             <button (click)="onDelete(order)" class="btn btn-danger">

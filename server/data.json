@@ -463,20 +463,6 @@
   ],
   "orders": [
     {
-      "id": 1,
-      "customerId": 1,
-      "productId": 5,
-      "amount": 167000,
-      "status": "new"
-    },
-    {
-      "id": 2,
-      "customerId": 15,
-      "productId": 15,
-      "amount": 17000,
-      "status": "shipped"
-    },
-    {
       "id": 3,
       "customerId": 65,
       "productId": 23,
@@ -496,13 +482,6 @@
       "productId": 5,
       "amount": 1888007,
       "status": "shipped"
-    },
-    {
-      "id": 6,
-      "customerId": 8,
-      "productId": 145,
-      "amount": 18957000,
-      "status": "new"
     },
     {
       "id": 7,
