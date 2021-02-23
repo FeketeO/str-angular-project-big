@@ -9,11 +9,13 @@ import { EditProductComponent } from './page/edit-product/edit-product.component
 import { SorterPipe } from './pipe/sorter.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
-    EditProductComponent,
+    ProductListComponent,    
+    EditProductComponent,    
     SorterPipe,
     FilterPipe
   ],

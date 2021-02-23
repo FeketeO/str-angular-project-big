@@ -11,7 +11,7 @@ import { OrderService } from 'src/app/service/order.service';
 })
 export class OrderListComponent implements OnInit {
   orderList: BehaviorSubject<Order[]> = this.orderService.list$;
-  testOrder: Observable<Order> = this.orderService.get(1);
+  //testOrder: Observable<Order> = this.orderService.get(1);
   columnKey: string = '';
   phrase: string = '';
 
