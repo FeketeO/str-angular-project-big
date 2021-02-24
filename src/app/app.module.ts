@@ -11,6 +11,10 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { EditOrderComponent } from './page/edit-order/edit-order.component';
+import { OrderListComponent } from './page/order-list/order-list.component';
+import { NavigationComponent } from './common/navigation/navigation.component';
+import { CustomerListComponent } from './page/customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { DashboardComponent } from './page/dashboard/dashboard.component';
     FilterPipe,
     SidebarComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    EditOrderComponent,
+    OrderListComponent,
+    NavigationComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserModule,
