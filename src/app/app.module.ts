@@ -8,20 +8,26 @@ import { ProductListComponent } from './page/product-list/product-list.component
 import { EditProductComponent } from './page/edit-product/edit-product.component';
 import { SorterPipe } from './pipe/sorter.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
+import { EditOrderComponent } from './page/edit-order/edit-order.component';
+import { OrderListComponent } from './page/order-list/order-list.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
 import { EditBillComponent } from './page/edit-bill/edit-bill.component';
 import { BillListComponent } from './page/bill-list/bill-list.component';
+import { CustomerListComponent } from './page/customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
-    EditProductComponent,
+    ProductListComponent,    
+    EditProductComponent,    
     SorterPipe,
     FilterPipe,
     NavigationComponent,
     EditBillComponent,
-    BillListComponent
+    BillListComponent,
+    EditOrderComponent,
+    OrderListComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserModule,

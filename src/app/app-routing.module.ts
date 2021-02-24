@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { EditOrderComponent } from './page/edit-order/edit-order.component';
 import { EditProductComponent } from './page/edit-product/edit-product.component';
+import { OrderListComponent } from './page/order-list/order-list.component';
 import { ProductListComponent } from './page/product-list/product-list.component';
 import { EditBillComponent } from './page/edit-bill/edit-bill.component';
 import { BillListComponent } from './page/bill-list/bill-list.component';
@@ -14,12 +16,10 @@ const routes: Routes = [
     path: 'product',
     component: ProductListComponent,
   },
-
   {
     path: 'product/:id',
     component: EditProductComponent,
   },
-
   {
     path: 'bill',
     component: BillListComponent,
@@ -28,8 +28,18 @@ const routes: Routes = [
     path: 'bill/:id',
     component: EditBillComponent,
   },
-
-
+  {
+    path: 'order',
+    component: OrderListComponent,
+  },
+  {
+    path: 'order/:id',
+    component: EditOrderComponent,
+  },
+  {
+    path: '**',
+    component: ProductListComponent,
+  },
 ];
 
 @NgModule({
