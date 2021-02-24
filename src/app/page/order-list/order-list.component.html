@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h3>Orders</h3>
+        </div>
+        <div class="col-8">
+            <button class="btn btn-success btn-block" [routerLink]="[0]">
+                <i class="fa fa-edit"></i>
+                Add new order
+            </button>
+        </div>
+        <div class="col-4">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" (keyup)="onChangePhrase($event)">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th (click)="onColumnSelect('id')">Id</th>
+                    <th (click)="onColumnSelect('customerId')">CustomerId</th>
+                    <th (click)="onColumnSelect('productId')">ProductId</th>
+                    <th (click)="onColumnSelect('amount')">Amount</th>
+                    <th (click)="onColumnSelect('status')">Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orderList | async">
+                    <td>{{order.id}}</td>
+                    <td>{{order.customerId}} </td>
+                    <td>{{order.productId}}</td>
+                    <td>{{order.amount}}</td>
+                    <td>{{order.status}}</td>
+                    <td>
+                        <div class="btn-group">
+                            <button [routerLink]="[order.id]" class="btn btn-info">
+                                <i class="fa fa-pencil"></i>
+                            </button>
+                            <button (click)="onDelete(order)" class="btn btn-danger">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
