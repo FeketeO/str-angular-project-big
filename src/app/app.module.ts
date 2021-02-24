@@ -11,6 +11,8 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { EditOrderComponent } from './page/edit-order/edit-order.component';
 import { OrderListComponent } from './page/order-list/order-list.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
+import { EditBillComponent } from './page/edit-bill/edit-bill.component';
+import { BillListComponent } from './page/bill-list/bill-list.component';
 import { CustomerListComponent } from './page/customer-list/customer-list.component';
 
 @NgModule({
@@ -20,9 +22,11 @@ import { CustomerListComponent } from './page/customer-list/customer-list.compon
     EditProductComponent,    
     SorterPipe,
     FilterPipe,
+    NavigationComponent,
+    EditBillComponent,
+    BillListComponent,
     EditOrderComponent,
     OrderListComponent,
-    NavigationComponent,
     CustomerListComponent
   ],
   imports: [
