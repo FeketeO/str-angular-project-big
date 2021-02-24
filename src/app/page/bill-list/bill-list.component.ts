@@ -27,7 +27,7 @@ export class BillListComponent implements OnInit {
 
   onRemove(bill: Bill): void {
     this.billService.remove(bill),
-      this.router.navigate([''])
+      this.router.navigate(['bill'])
   }
 
   irany: boolean = false;
