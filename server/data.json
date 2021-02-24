@@ -450,5 +450,56 @@
       "featured": false,
       "active": true
     }
+  ],
+  "orders": [
+    {
+      "id": 3,
+      "customerId": 65,
+      "productId": 23,
+      "amount": 17000,
+      "status": "shipped"
+    },
+    {
+      "id": 4,
+      "customerId": 18,
+      "productId": 12,
+      "amount": 1777850,
+      "status": "shipped"
+    },
+    {
+      "id": 5,
+      "customerId": 3,
+      "productId": 5,
+      "amount": 1888007,
+      "status": "shipped"
+    },
+    {
+      "id": 7,
+      "customerId": 15,
+      "productId": 15,
+      "amount": 1755600,
+      "status": "shipped"
+    },
+    {
+      "id": 8,
+      "customerId": 15,
+      "productId": 15,
+      "amount": 1756970,
+      "status": "shipped"
+    },
+    {
+      "id": 9,
+      "customerId": 15,
+      "productId": 15,
+      "amount": 1700000,
+      "status": "shipped"
+    },
+    {
+      "id": 10,
+      "customerId": 15,
+      "productId": 15,
+      "amount": 175697820,
+      "status": "new"
+    }
   ]
 }
