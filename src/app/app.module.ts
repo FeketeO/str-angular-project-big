@@ -9,6 +9,7 @@ import { EditProductComponent } from './page/edit-product/edit-product.component
 import { SorterPipe } from './pipe/sorter.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
 import { NavigationComponent } from './common/navigation/navigation.component';
+import { EditBillComponent } from './page/edit-bill/edit-bill.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavigationComponent } from './common/navigation/navigation.component';
     EditProductComponent,
     SorterPipe,
     FilterPipe,
-    NavigationComponent
+    NavigationComponent,
+    EditBillComponent
   ],
   imports: [
     BrowserModule,
