@@ -7,6 +7,8 @@ import { ProductListComponent } from './page/product-list/product-list.component
 import { EditBillComponent } from './page/edit-bill/edit-bill.component';
 import { BillListComponent } from './page/bill-list/bill-list.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { EditCustomerComponent } from './page/edit-customer/edit-customer.component';
+import { CustomerListComponent } from './page/customer-list/customer-list.component';
 
 const routes: Routes = [
   {
@@ -40,6 +42,13 @@ const routes: Routes = [
   {
     path: '**',
     component: ProductListComponent,
+  },
+  {path: 'customer',
+    component: CustomerListComponent,
+  },
+  {
+    path: 'customer/:id',
+    component: EditCustomerComponent,
   },
 ];
 
