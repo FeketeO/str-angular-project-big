@@ -10,6 +10,8 @@ import { SorterPipe } from './pipe/sorter.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
 import { EditOrderComponent } from './page/edit-order/edit-order.component';
 import { OrderListComponent } from './page/order-list/order-list.component';
+import { EditBillComponent } from './page/edit-bill/edit-bill.component';
+import { BillListComponent } from './page/bill-list/bill-list.component';
 import { CustomerListComponent } from './page/customer-list/customer-list.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
@@ -21,6 +23,8 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
     EditProductComponent,
     SorterPipe,
     FilterPipe,
+    EditBillComponent,
+    BillListComponent,
     EditOrderComponent,
     OrderListComponent,
     CustomerListComponent,

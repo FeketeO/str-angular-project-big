@@ -11,9 +11,12 @@ import { OrderService } from 'src/app/service/order.service';
 })
 export class OrderListComponent implements OnInit {
   orderList: BehaviorSubject<Order[]> = this.orderService.list$;
-  //testOrder: Observable<Order> = this.orderService.get(1);
+  
   columnKey: string = '';
   phrase: string = '';
+  filterKey: string = 'name';
+  filterKeys: string[] = Object.keys(new Order());
+  irany:boolean=false;
 
   constructor(
     private orderService: OrderService,
@@ -31,6 +34,7 @@ export class OrderListComponent implements OnInit {
 
   onColumnSelect(key: string): void {
     this.columnKey = key;
+    this.irany=!this.irany;
   }
 
   onChangePhrase(event: any): void {
