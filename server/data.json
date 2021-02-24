@@ -121,26 +121,6 @@
       "active": true
     },
     {
-      "id": 18,
-      "name": "SL-Class",
-      "type": "Mercedes-Benz",
-      "catID": 1,
-      "description": "brand synergistic experiences",
-      "price": 19766,
-      "featured": true,
-      "active": true
-    },
-    {
-      "id": 19,
-      "name": "350Z",
-      "type": "Nissan",
-      "catID": 1,
-      "description": "engage scalable solutions",
-      "price": 15106,
-      "featured": true,
-      "active": true
-    },
-    {
       "id": 20,
       "name": "Fit",
       "type": "Honda",
@@ -498,7 +478,158 @@
       "id": 10,
       "customerId": 15,
       "productId": 15,
-      "amount": 175697820,
+      "amount": 175697820
+    }
+  ],
+  "bills": [
+    {
+      "id": 1,
+      "orderID": 92,
+      "amount": 48,
+      "status": "new"
+    },
+    {
+      "id": 2,
+      "orderID": 81,
+      "amount": 55,
+      "status": "new"
+    },
+    {
+      "id": 3,
+      "orderID": 73,
+      "amount": 33,
+      "status": "paid"
+    },
+    {
+      "id": 4,
+      "orderID": 95,
+      "amount": 35,
+      "status": "paid"
+    },
+    {
+      "id": 5,
+      "orderID": 1,
+      "amount": 18,
+      "status": "new"
+    },
+    {
+      "id": 6,
+      "orderID": 93,
+      "amount": 19,
+      "status": "paid"
+    },
+    {
+      "id": 7,
+      "orderID": 43,
+      "amount": 60,
+      "status": "paid"
+    },
+    {
+      "id": 8,
+      "orderID": 43,
+      "amount": 12,
+      "status": "paid"
+    },
+    {
+      "id": 9,
+      "orderID": 6,
+      "amount": 17,
+      "status": "new"
+    },
+    {
+      "id": 10,
+      "orderID": 36,
+      "amount": 62,
+      "status": "new"
+    },
+    {
+      "id": 11,
+      "orderID": 23,
+      "amount": 53,
+      "status": "new"
+    },
+    {
+      "id": 12,
+      "orderID": 14,
+      "amount": 7,
+      "status": "paid"
+    },
+    {
+      "id": 13,
+      "orderID": 5,
+      "amount": 26,
+      "status": "new"
+    },
+    {
+      "id": 14,
+      "orderID": 43,
+      "amount": 83,
+      "status": "new"
+    },
+    {
+      "id": 15,
+      "orderID": 56,
+      "amount": 22,
+      "status": "new"
+    },
+    {
+      "id": 16,
+      "orderID": 80,
+      "amount": 57,
+      "status": "paid"
+    },
+    {
+      "id": 17,
+      "orderID": 29,
+      "amount": 87,
+      "status": "new"
+    },
+    {
+      "id": 18,
+      "orderID": 17,
+      "amount": 74,
+      "status": "paid"
+    },
+    {
+      "id": 19,
+      "orderID": 70,
+      "amount": 36,
+      "status": "new"
+    },
+    {
+      "id": 20,
+      "orderID": 25,
+      "amount": 87,
+      "status": "new"
+    },
+    {
+      "id": 21,
+      "orderID": 55,
+      "amount": 84,
+      "status": "paid"
+    },
+    {
+      "id": 22,
+      "orderID": 43,
+      "amount": 32,
+      "status": "new"
+    },
+    {
+      "id": 23,
+      "orderID": 92,
+      "amount": 93,
+      "status": "new"
+    },
+    {
+      "id": 24,
+      "orderID": 85,
+      "amount": 44,
+      "status": "new"
+    },
+    {
+      "id": 25,
+      "orderID": 47,
+      "amount": 41,
       "status": "new"
     }
   ]
