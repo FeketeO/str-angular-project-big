@@ -449,16 +449,6 @@
       "price": 12852,
       "featured": false,
       "active": true
-    },
-    {
-      "id": 51,
-      "name": "Szőcei Zoltán",
-      "type": "tank",
-      "catID": 0,
-      "description": "győri masszázs olcsón és hatékonyan",
-      "price": 23,
-      "featured": true,
-      "active": true
     }
   ],
   "orders": [
