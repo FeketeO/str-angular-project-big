@@ -8,13 +8,10 @@ import { ProductListComponent } from './page/product-list/product-list.component
 import { EditProductComponent } from './page/edit-product/edit-product.component';
 import { SorterPipe } from './pipe/sorter.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
-<<<<<<< HEAD
 import { EditOrderComponent } from './page/edit-order/edit-order.component';
 import { OrderListComponent } from './page/order-list/order-list.component';
-=======
 import { NavigationComponent } from './common/navigation/navigation.component';
 import { CustomerListComponent } from './page/customer-list/customer-list.component';
->>>>>>> origin/dev
 
 @NgModule({
   declarations: [
@@ -23,13 +20,10 @@ import { CustomerListComponent } from './page/customer-list/customer-list.compon
     EditProductComponent,    
     SorterPipe,
     FilterPipe,
-<<<<<<< HEAD
     EditOrderComponent,
     OrderListComponent
-=======
     NavigationComponent,
     CustomerListComponent
->>>>>>> origin/dev
   ],
   imports: [
     BrowserModule,
