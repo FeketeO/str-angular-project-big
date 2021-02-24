@@ -11,9 +11,6 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { EditOrderComponent } from './page/edit-order/edit-order.component';
 import { OrderListComponent } from './page/order-list/order-list.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
