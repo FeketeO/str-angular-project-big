@@ -38,7 +38,7 @@ updating:boolean=false;
       this.updating=true,
       this.productService.update(product)
     }
-    this.router.navigate([''])
+    this.router.navigate(['product'])
     
   }
 }
