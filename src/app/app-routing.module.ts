@@ -6,11 +6,12 @@ import { OrderListComponent } from './page/order-list/order-list.component';
 import { ProductListComponent } from './page/product-list/product-list.component';
 import { EditBillComponent } from './page/edit-bill/edit-bill.component';
 import { BillListComponent } from './page/bill-list/bill-list.component';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductListComponent,
+    component: DashboardComponent,
   },
   {
     path: 'product',
