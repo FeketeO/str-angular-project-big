@@ -433,11 +433,18 @@
   ],
   "orders": [
     {
+      "id": 3,
+      "customerId": 65,
+      "productId": 23,
+      "amount": 17000,
+      "status": "shipped"
+    },
+    {
       "id": 4,
       "customerId": 18,
       "productId": 12,
-      "amount": 17778500,
-      "status": "paid"
+      "amount": 1777850,
+      "status": "shipped"
     },
     {
       "id": 5,
@@ -471,15 +478,7 @@
       "id": 10,
       "customerId": 15,
       "productId": 15,
-      "amount": 175697820,
-      "status": "shipped"
-    },
-    {
-      "id": 11,
-      "customerId": 11,
-      "productId": 12,
-      "amount": 1300000,
-      "status": "new"
+      "amount": 175697820
     }
   ],
   "bills": [
