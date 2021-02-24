@@ -10,16 +10,25 @@ import { CustomerService } from '../../service/customer.service';
   styleUrls: ['./customer-list.component.scss']
 })
 export class CustomerListComponent implements OnInit {
+  phrase: string = '';
 
   customerList: BehaviorSubject<Customer[]> = this.customerService.list$;
   constructor(
     private customerService: CustomerService,
+    private router:Router,
 
   ) { }
 
   ngOnInit(): void {
      this.customerService.getAll();
   }
+  onRemove(customer: Customer): void {
+    this.customerService.remove(customer),
+      this.router.navigate(['customer'])
+  }
 
+  onChangePhrase(event: any): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
 
 }
