@@ -8,12 +8,15 @@ import { ProductListComponent } from './page/product-list/product-list.component
 import { EditProductComponent } from './page/edit-product/edit-product.component';
 import { SorterPipe } from './pipe/sorter.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
+
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { EditOrderComponent } from './page/edit-order/edit-order.component';
 import { OrderListComponent } from './page/order-list/order-list.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
+import { EditBillComponent } from './page/edit-bill/edit-bill.component';
+import { BillListComponent } from './page/bill-list/bill-list.component';
 import { CustomerListComponent } from './page/customer-list/customer-list.component';
 
 @NgModule({
@@ -25,10 +28,12 @@ import { CustomerListComponent } from './page/customer-list/customer-list.compon
     FilterPipe,
     SidebarComponent,
     NavbarComponent,
-    DashboardComponent,
+    DashboardComponent
+    NavigationComponent,
+    EditBillComponent,
+    BillListComponent,
     EditOrderComponent,
     OrderListComponent,
-    NavigationComponent,
     CustomerListComponent
   ],
   imports: [
