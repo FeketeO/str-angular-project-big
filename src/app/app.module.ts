@@ -10,6 +10,7 @@ import { SorterPipe } from './pipe/sorter.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
 import { NavigationComponent } from './common/navigation/navigation.component';
 import { EditBillComponent } from './page/edit-bill/edit-bill.component';
+import { BillListComponent } from './page/bill-list/bill-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditBillComponent } from './page/edit-bill/edit-bill.component';
     SorterPipe,
     FilterPipe,
     NavigationComponent,
-    EditBillComponent
+    EditBillComponent,
+    BillListComponent
   ],
   imports: [
     BrowserModule,
