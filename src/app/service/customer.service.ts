@@ -48,4 +48,13 @@ remove(customer:Customer):void {
     );
 
 }
+
+create(customer:Customer):void {
+  this.http.post<Customer>(
+    `${this.apiUrl}`,
+    customer
+    ).subscribe(
+      () =>this.getAll()
+    );
+   }
 }
