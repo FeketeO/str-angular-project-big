@@ -21,7 +21,7 @@ import { CustomerListComponent } from './page/customer-list/customer-list.compon
     SorterPipe,
     FilterPipe,
     EditOrderComponent,
-    OrderListComponent
+    OrderListComponent,
     NavigationComponent,
     CustomerListComponent
   ],
