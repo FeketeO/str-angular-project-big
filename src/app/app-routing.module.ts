@@ -40,16 +40,19 @@ const routes: Routes = [
     component: EditOrderComponent,
   },
   {
-    path: '**',
-    component: ProductListComponent,
-  },
-  {path: 'customer',
+    path: 'customer',
     component: CustomerListComponent,
   },
   {
     path: 'customer/:id',
     component: EditCustomerComponent,
   },
+  {
+    path: '**',
+    component: ProductListComponent,
+  },
+
+
 ];
 
 @NgModule({

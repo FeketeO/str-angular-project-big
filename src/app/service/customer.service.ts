@@ -9,7 +9,7 @@ import { Customer } from '../model/customer';
 })
 export class CustomerService {
 
-  apiUrl:string=`http://localhost:3000/customers`;
+  apiUrl:string=`http://localhost:3000/customer`;
   constructor(
     private http:HttpClient,
   ) { }
