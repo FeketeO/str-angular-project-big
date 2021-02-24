@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let order of orderList | async">
+                <tr *ngFor="let order of orderList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
                     <td>{{order.id}}</td>
                     <td>{{order.customerId}} </td>
                     <td>{{order.productId}}</td>
