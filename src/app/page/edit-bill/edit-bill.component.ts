@@ -38,7 +38,7 @@ export class EditBillComponent implements OnInit {
       this.updating = true;
       this.billService.update(bill);
     }
-    this.router.navigate([''])
+    this.router.navigate(['bill'])
   }
 
 
