@@ -30,6 +30,15 @@ export class CustomerService {
   return of(new Customer())
     }
 
+    create(customer:Customer):void {
+      this.http.post<Customer>(
+        `${this.apiUrl}`,
+        customer
+        ).subscribe(
+          () =>this.getAll()
+        );
+       }
+
     update(customer:Customer):void {
   this.http.patch<Customer>(
     `${this.apiUrl}/${customer.id}`,
@@ -46,15 +55,7 @@ remove(customer:Customer):void {
     ).subscribe(
       () =>this.getAll()
     );
-
 }
 
-create(customer:Customer):void {
-  this.http.post<Customer>(
-    `${this.apiUrl}`,
-    customer
-    ).subscribe(
-      () =>this.getAll()
-    );
-   }
+
 }
