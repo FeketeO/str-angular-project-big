@@ -4,12 +4,9 @@
         <app-navbar></app-navbar>
         <div class="content">
             <div class="container-fluid">
-
                 <div class="row">
-                    <div class="col-8 offset-2">
-                        <h3>Rendelések</h3>
-                    </div>
-                    <div class="col-8">
+
+                    <div class="col-12 col-lg-5">
                         <button class="btn btn-success btn-block" [routerLink]="[0]">
                             <i class="fa fa-edit"></i>
                             Add new order
@@ -22,44 +19,52 @@
                             </option>
                         </select>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="text" placeholder="Search"
                                 (keyup)="onChangePhrase($event)">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
                     </div>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th (click)="onColumnSelect('id')">Id</th>
-                                <th (click)="onColumnSelect('customerId')">CustomerId</th>
-                                <th (click)="onColumnSelect('productId')">ProductId</th>
-                                <th (click)="onColumnSelect('amount')">Amount</th>
-                                <th (click)="onColumnSelect('status')">Status</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr
-                                *ngFor="let order of orderList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
-                                <td>{{order.id}}</td>
-                                <td>{{order.customerId}} </td>
-                                <td>{{order.productId}}</td>
-                                <td>{{order.amount}}</td>
-                                <td>{{order.status}}</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button [routerLink]="[order.id]" class="btn btn-info">
-                                            <i class="fa fa-pencil"></i>
-                                        </button>
-                                        <button (click)="onDelete(order)" class="btn btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- <tr
+                </div>
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title ">Order Table</h4>
+                        <p class="card-category"> All orders are listed below</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <tr>
+                                        <th (click)="onColumnSelect('id')">Id</th>
+                                        <th (click)="onColumnSelect('customerId')">CustomerId</th>
+                                        <th (click)="onColumnSelect('productId')">ProductId</th>
+                                        <th (click)="onColumnSelect('amount')">Amount</th>
+                                        <th (click)="onColumnSelect('status')">Status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        *ngFor="let order of orderList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
+                                        <td>{{order.id}}</td>
+                                        <td>{{order.customerId}} </td>
+                                        <td>{{order.productId}}</td>
+                                        <td>{{order.amount}}</td>
+                                        <td>{{order.status}}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button [routerLink]="[order.id]" class="btn btn-info">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button (click)="onDelete(order)" class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- <tr
                                 *ngFor="let order of orderList | async">
                                 <td>{{order.id}}</td>
                                 <td>{{order.customerId}} </td>
@@ -68,9 +73,11 @@
                                 <td>{{order.status}}</td>
                                 <td></td>
                             </tr> -->
-                        </tbody>
-                    </table>
+                                </tbody>
+                            </table>
 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
