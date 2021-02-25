@@ -31,7 +31,7 @@
                         <h4 class="card-title ">Product Table</h4>
                         <p class="card-category"> All products are listed below</p>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class=" text-success">
@@ -43,9 +43,9 @@
                                     <th (click)="onColumnSelect('price')">Price</th>
                                     <th (click)="onColumnSelect('featured')">Featured</th>
                                     <th (click)="onColumnSelect('active')">Active</th>
+                                    <th>Edit</th>
                                     <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
                                         <i *ngIf="irany" class="fa fa-arrow-down"></i>
-
                                     </th>
                                 </thead>
                                 <tbody>
