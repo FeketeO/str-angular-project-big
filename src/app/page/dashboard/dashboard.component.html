@@ -63,7 +63,13 @@
           </div> -->
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <app-graph-card [cardClass]="'card-header-success'"
+            [title]="'Napi eladás.'"
+            [sales]=55
+            [comment]="'% increase in today sales.'"
+
+          ></app-graph-card>
+          <!-- <div class="col-md-4">
             <div class="card card-chart">
               <div class="card-header card-header-success">
                 <div class="ct-chart" id="dailySalesChart"></div>
@@ -79,7 +85,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="col-md-4">
             <div class="card card-chart">
               <div class="card-header card-header-warning">

@@ -18,6 +18,7 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { EditCustomerComponent } from './page/edit-customer/edit-customer.component';
 import { InfoCardComponent } from './common/info-card/info-card.component';
+import { GraphCardComponent } from './common/graph-card/graph-card.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { InfoCardComponent } from './common/info-card/info-card.component';
     SidebarComponent,
     DashboardComponent,
     EditCustomerComponent,
-    InfoCardComponent
+    InfoCardComponent,
+    GraphCardComponent
   ],
   imports: [
     BrowserModule,
