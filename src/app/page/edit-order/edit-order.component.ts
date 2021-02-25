@@ -37,7 +37,7 @@ export class EditOrderComponent implements OnInit {
       this.updating = true;
       this.orderService.update(order);
     }
-    this.router.navigate([''])
+    this.router.navigate(['order'])
   }
 
 }

@@ -15,6 +15,9 @@ import { BillListComponent } from './page/bill-list/bill-list.component';
 import { CustomerListComponent } from './page/customer-list/customer-list.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { EditCustomerComponent } from './page/edit-customer/edit-customer.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
     OrderListComponent,
     CustomerListComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    DashboardComponent,
+    EditCustomerComponent
   ],
   imports: [
     BrowserModule,

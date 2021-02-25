@@ -1,19 +1,636 @@
 {
-  "posts": [
+  "products": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": 4,
+      "name": "Yukon XL 2500",
+      "type": "GMC",
+      "catID": 3,
+      "description": "implement global channels",
+      "price": 7605,
+      "featured": false,
+      "active": false
+    },
+    {
+      "id": 5,
+      "name": "9-3",
+      "type": "Saab",
+      "catID": 3,
+      "description": "exploit virtual methodologies",
+      "price": 12907,
+      "featured": true,
+      "active": false
+    },
+    {
+      "id": 6,
+      "name": "Wrangler",
+      "type": "Jeep",
+      "catID": 2,
+      "description": "aggregate impactful synergies",
+      "price": 16321,
+      "featured": true,
+      "active": false
+    },
+    {
+      "id": 7,
+      "name": "Avalon",
+      "type": "Toyota",
+      "catID": 3,
+      "description": "grow proactive networks",
+      "price": 7324,
+      "featured": true,
+      "active": false
+    },
+    {
+      "id": 10,
+      "name": "Enclave",
+      "type": "Buick",
+      "catID": 2,
+      "description": "unleash B2C paradigms",
+      "price": 13448,
+      "featured": false,
+      "active": false
+    },
+    {
+      "id": 11,
+      "name": "I",
+      "type": "Infiniti",
+      "catID": 1,
+      "description": "whiteboard vertical networks",
+      "price": 16904,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 12,
+      "name": "XLR-V",
+      "type": "Cadillac",
+      "catID": 3,
+      "description": "engage bricks-and-clicks eyeballs",
+      "price": 13225,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 13,
+      "name": "Blazer",
+      "type": "Chevrolet",
+      "catID": 1,
+      "description": "mesh rich e-tailers",
+      "price": 17555,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 14,
+      "name": "Grand Cherokee",
+      "type": "Jeep",
+      "catID": 3,
+      "description": "facilitate granular mindshare",
+      "price": 2944,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 15,
+      "name": "Sebring",
+      "type": "Chrysler",
+      "catID": 2,
+      "description": "visualize magnetic applications",
+      "price": 5774,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 16,
+      "name": "240SX",
+      "type": "Nissan",
+      "catID": 2,
+      "description": "engage web-enabled functionalities",
+      "price": 10836,
+      "featured": true,
+      "active": false
+    },
+    {
+      "id": 17,
+      "name": "Probe",
+      "type": "Ford",
+      "catID": 1,
+      "description": "enable interactive architectures",
+      "price": 16283,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 20,
+      "name": "Fit",
+      "type": "Honda",
+      "catID": 3,
+      "description": "benchmark 24/365 supply-chains",
+      "price": 19535,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 21,
+      "name": "Sierra",
+      "type": "GMC",
+      "catID": 2,
+      "description": "transition sticky e-services",
+      "price": 17649,
+      "featured": false,
+      "active": false
+    },
+    {
+      "id": 22,
+      "name": "Biturbo",
+      "type": "Maserati",
+      "catID": 1,
+      "description": "brand innovative metrics",
+      "price": 2248,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 23,
+      "name": "CL-Class",
+      "type": "Mercedes-Benz",
+      "catID": 2,
+      "description": "integrate wireless metrics",
+      "price": 15123,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 24,
+      "name": "Ranger",
+      "type": "Ford",
+      "catID": 1,
+      "description": "visualize wireless supply-chains",
+      "price": 9110,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 25,
+      "name": "Freelander",
+      "type": "Land Rover",
+      "catID": 1,
+      "description": "engage cross-media deliverables",
+      "price": 14470,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 26,
+      "name": "Escalade ESV",
+      "type": "Cadillac",
+      "catID": 2,
+      "description": "reinvent transparent convergence",
+      "price": 16610,
+      "featured": false,
+      "active": false
+    },
+    {
+      "id": 27,
+      "name": "Taurus",
+      "type": "Ford",
+      "catID": 1,
+      "description": "cultivate efficient content",
+      "price": 19486,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 28,
+      "name": "Taurus",
+      "type": "Ford",
+      "catID": 1,
+      "description": "exploit intuitive e-services",
+      "price": 13621,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 29,
+      "name": "G",
+      "type": "Infiniti",
+      "catID": 2,
+      "description": "matrix impactful systems",
+      "price": 4288,
+      "featured": true,
+      "active": false
+    },
+    {
+      "id": 30,
+      "name": "Discovery",
+      "type": "Land Rover",
+      "catID": 2,
+      "description": "whiteboard distributed e-commerce",
+      "price": 18850,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 31,
+      "name": "Sonata",
+      "type": "Hyundai",
+      "catID": 3,
+      "description": "reinvent robust web-readiness",
+      "price": 12158,
+      "featured": false,
+      "active": false
+    },
+    {
+      "id": 32,
+      "name": "Yukon XL 1500",
+      "type": "GMC",
+      "catID": 2,
+      "description": "enhance sexy technologies",
+      "price": 16423,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 33,
+      "name": "3 Series",
+      "type": "BMW",
+      "catID": 3,
+      "description": "empower innovative relationships",
+      "price": 19476,
+      "featured": true,
+      "active": false
+    },
+    {
+      "id": 34,
+      "name": "Rio",
+      "type": "Kia",
+      "catID": 1,
+      "description": "engineer scalable networks",
+      "price": 18463,
+      "featured": false,
+      "active": false
+    },
+    {
+      "id": 35,
+      "name": "F430",
+      "type": "Ferrari",
+      "catID": 2,
+      "description": "orchestrate enterprise platforms",
+      "price": 4249,
+      "featured": false,
+      "active": false
+    },
+    {
+      "id": 36,
+      "name": "Titan",
+      "type": "Nissan",
+      "catID": 1,
+      "description": "implement best-of-breed experiences",
+      "price": 8622,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 37,
+      "name": "Z4",
+      "type": "BMW",
+      "catID": 1,
+      "description": "matrix magnetic niches",
+      "price": 10448,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 38,
+      "name": "Ranger",
+      "type": "Ford",
+      "catID": 2,
+      "description": "e-enable synergistic functionalities",
+      "price": 10137,
+      "featured": false,
+      "active": false
+    },
+    {
+      "id": 39,
+      "name": "NSX",
+      "type": "Acura",
+      "catID": 1,
+      "description": "visualize scalable models",
+      "price": 12016,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 40,
+      "name": "Elise",
+      "type": "Lotus",
+      "catID": 3,
+      "description": "empower distributed models",
+      "price": 10151,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 41,
+      "name": "Astro",
+      "type": "Chevrolet",
+      "catID": 3,
+      "description": "engage B2C e-services",
+      "price": 4021,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 42,
+      "name": "Sunbird",
+      "type": "Pontiac",
+      "catID": 3,
+      "description": "visualize frictionless e-tailers",
+      "price": 18898,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 43,
+      "name": "2500",
+      "type": "Chevrolet",
+      "catID": 1,
+      "description": "seize out-of-the-box content",
+      "price": 16449,
+      "featured": true,
+      "active": false
+    },
+    {
+      "id": 44,
+      "name": "Highlander",
+      "type": "Toyota",
+      "catID": 2,
+      "description": "transition rich experiences",
+      "price": 8675,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 45,
+      "name": "Sunfire",
+      "type": "Pontiac",
+      "catID": 3,
+      "description": "envisioneer global portals",
+      "price": 10462,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 46,
+      "name": "RSX",
+      "type": "Acura",
+      "catID": 2,
+      "description": "leverage intuitive e-markets",
+      "price": 6534,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 47,
+      "name": "S8",
+      "type": "Audi",
+      "catID": 1,
+      "description": "architect viral bandwidth",
+      "price": 11837,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 48,
+      "name": "LeSabre",
+      "type": "Buick",
+      "catID": 2,
+      "description": "grow enterprise convergence",
+      "price": 1381,
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": 49,
+      "name": "DeVille",
+      "type": "Cadillac",
+      "catID": 2,
+      "description": "generate visionary metrics",
+      "price": 11142,
+      "featured": true,
+      "active": false
+    },
+    {
+      "id": 50,
+      "name": "RX",
+      "type": "Lexus",
+      "catID": 1,
+      "description": "aggregate wireless synergies",
+      "price": 12852,
+      "featured": false,
+      "active": true
     }
   ],
-  "comments": [
+  "orders": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 3,
+      "customerId": 65,
+      "productId": 23,
+      "amount": 17000,
+      "status": "shipped"
+    },
+    {
+      "id": 4,
+      "customerId": 18,
+      "productId": 12,
+      "amount": 1777850,
+      "status": "shipped"
+    },
+    {
+      "id": 5,
+      "customerId": 3,
+      "productId": 5,
+      "amount": 1888007,
+      "status": "shipped"
+    },
+    {
+      "id": 7,
+      "customerId": 15,
+      "productId": 15,
+      "amount": 1755600,
+      "status": "shipped"
+    },
+    {
+      "id": 8,
+      "customerId": 15,
+      "productId": 15,
+      "amount": 1756970,
+      "status": "shipped"
+    },
+    {
+      "id": 9,
+      "customerId": 15,
+      "productId": 15,
+      "amount": 1700000,
+      "status": "shipped"
+    },
+    {
+      "id": 10,
+      "customerId": 15,
+      "productId": 15,
+      "amount": 175697820
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "bills": [
+    {
+      "id": 1,
+      "orderID": 92,
+      "amount": 48,
+      "status": "new"
+    },
+    {
+      "id": 2,
+      "orderID": 81,
+      "amount": 55,
+      "status": "new"
+    },
+    {
+      "id": 3,
+      "orderID": 73,
+      "amount": 33,
+      "status": "paid"
+    },
+    {
+      "id": 4,
+      "orderID": 95,
+      "amount": 35,
+      "status": "paid"
+    },
+    {
+      "id": 5,
+      "orderID": 1,
+      "amount": 18,
+      "status": "new"
+    },
+    {
+      "id": 6,
+      "orderID": 93,
+      "amount": 19,
+      "status": "paid"
+    },
+    {
+      "id": 7,
+      "orderID": 43,
+      "amount": 60,
+      "status": "paid"
+    },
+    {
+      "id": 8,
+      "orderID": 43,
+      "amount": 12,
+      "status": "paid"
+    },
+    {
+      "id": 9,
+      "orderID": 6,
+      "amount": 17,
+      "status": "new"
+    },
+    {
+      "id": 10,
+      "orderID": 36,
+      "amount": 62,
+      "status": "new"
+    },
+    {
+      "id": 11,
+      "orderID": 23,
+      "amount": 53,
+      "status": "new"
+    },
+    {
+      "id": 12,
+      "orderID": 14,
+      "amount": 7,
+      "status": "paid"
+    },
+    {
+      "id": 13,
+      "orderID": 5,
+      "amount": 26,
+      "status": "new"
+    },
+    {
+      "id": 14,
+      "orderID": 43,
+      "amount": 83,
+      "status": "new"
+    },
+    {
+      "id": 15,
+      "orderID": 56,
+      "amount": 22,
+      "status": "new"
+    },
+    {
+      "id": 16,
+      "orderID": 80,
+      "amount": 57,
+      "status": "paid"
+    },
+    {
+      "id": 17,
+      "orderID": 29,
+      "amount": 87,
+      "status": "new"
+    },
+    {
+      "id": 18,
+      "orderID": 17,
+      "amount": 74,
+      "status": "paid"
+    },
+    {
+      "id": 19,
+      "orderID": 70,
+      "amount": 36,
+      "status": "new"
+    },
+    {
+      "id": 20,
+      "orderID": 25,
+      "amount": 87,
+      "status": "new"
+    },
+    {
+      "id": 21,
+      "orderID": 55,
+      "amount": 84,
+      "status": "paid"
+    },
+    {
+      "id": 22,
+      "orderID": 43,
+      "amount": 32,
+      "status": "new"
+    },
+    {
+      "id": 23,
+      "orderID": 92,
+      "amount": 93,
+      "status": "new"
+    },
+    {
+      "id": 24,
+      "orderID": 85,
+      "amount": 44,
+      "status": "new"
+    },
+    {
+      "id": 25,
+      "orderID": 47,
+      "amount": 41,
+      "status": "new"
+    }
+  ]
 }

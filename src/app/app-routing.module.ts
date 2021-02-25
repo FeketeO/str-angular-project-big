@@ -6,11 +6,14 @@ import { OrderListComponent } from './page/order-list/order-list.component';
 import { ProductListComponent } from './page/product-list/product-list.component';
 import { EditBillComponent } from './page/edit-bill/edit-bill.component';
 import { BillListComponent } from './page/bill-list/bill-list.component';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { EditCustomerComponent } from './page/edit-customer/edit-customer.component';
+import { CustomerListComponent } from './page/customer-list/customer-list.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductListComponent,
+    component: DashboardComponent,
   },
   {
     path: 'product',
@@ -37,9 +40,19 @@ const routes: Routes = [
     component: EditOrderComponent,
   },
   {
+    path: 'customer',
+    component: CustomerListComponent,
+  },
+  {
+    path: 'customer/:id',
+    component: EditCustomerComponent,
+  },
+  {
     path: '**',
     component: ProductListComponent,
   },
+
+
 ];
 
 @NgModule({

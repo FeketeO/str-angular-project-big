@@ -9,7 +9,7 @@ import { Customer } from '../model/customer';
 })
 export class CustomerService {
 
-  apiUrl:string=`http://localhost:3000/customers`;
+  apiUrl:string=`http://localhost:3000/customer`;
   constructor(
     private http:HttpClient,
   ) { }
@@ -48,4 +48,13 @@ remove(customer:Customer):void {
     );
 
 }
+
+create(customer:Customer):void {
+  this.http.post<Customer>(
+    `${this.apiUrl}`,
+    customer
+    ).subscribe(
+      () =>this.getAll()
+    );
+   }
 }

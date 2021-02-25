@@ -14,7 +14,7 @@ export class OrderListComponent implements OnInit {
   
   columnKey: string = '';
   phrase: string = '';
-  filterKey: string = 'name';
+  filterKey: string = 'amount';
   filterKeys: string[] = Object.keys(new Order());
   irany:boolean=false;
 
@@ -29,7 +29,7 @@ export class OrderListComponent implements OnInit {
 
   onDelete(order: Order): void {
     this.orderService.remove(order),
-      this.router.navigate([''])
+      this.router.navigate(['order'])
   }
 
   onColumnSelect(key: string): void {
