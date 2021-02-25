@@ -7,14 +7,7 @@
                 <div class="row">
                     <div *ngIf="(order$ | async) as order" class="col-6 offset-3">
                         <form #orderForm="ngForm" (ngSubmit)="onUpdate(orderForm, order)">
-                            <!-- <div class="form-group">
-                <label for="id">id</label>
-                <input id="id" name="id" [(ngModel)]="order.id" type="number" class="form-control" pattern="\d{1,10}"
-                    required>
-                <div [hidden]="orderForm.controls.id?.valid" class="error-message">
-                    Az id minimum 1 és maximum 10 számjegyből állhat!
-                </div>
-            </div> -->
+                            
                             <div class="form-group">
                                 <label for="customerId">CustomerId</label>
                                 <input id="customerId" name="customerId" [(ngModel)]="order.customerId" type="number"
