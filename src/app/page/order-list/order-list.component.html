@@ -8,7 +8,7 @@
                     <div class="col-12 col-lg-5">
                         <button class="btn btn-success btn-block" [routerLink]="[0]">
                             <i class="fa fa-edit"></i>
-                            Create Product
+                            Add new order
                         </button>
                     </div>
                     <div class="col-12 col-lg-3 ">
@@ -27,51 +27,57 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header card-header-success">
-                        <h4 class="card-title ">Product Table</h4>
-                        <p class="card-category"> All products are listed below</p>
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title ">Order Table</h4>
+                        <p class="card-category"> All orders are listed below</p>
                     </div>
                     <div class="card-body text-center">
                         <div class="table-responsive">
                             <table class="table">
-                                <thead class=" text-success">
-                                    <th (click)="onColumnSelect('id')">ID</th>
-                                    <th (click)="onColumnSelect('name')">Name</th>
-                                    <th (click)="onColumnSelect('type')">Type</th>
-                                    <th (click)="onColumnSelect('catID')">CatID</th>
-                                    <th (click)="onColumnSelect('description')">Description</th>
-                                    <th (click)="onColumnSelect('price')">Price</th>
-                                    <th (click)="onColumnSelect('featured')">Featured</th>
-                                    <th (click)="onColumnSelect('active')">Active</th>
-                                    <th>Edit</th>
-                                    <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
-                                        <i *ngIf="irany" class="fa fa-arrow-down"></i>
-                                    </th>
+                                <thead class="text-primary">
+                                    <tr>
+                                        <th (click)="onColumnSelect('id')">Id</th>
+                                        <th (click)="onColumnSelect('customerId')">CustomerId</th>
+                                        <th (click)="onColumnSelect('productId')">ProductId</th>
+                                        <th (click)="onColumnSelect('amount')">Amount</th>
+                                        <th (click)="onColumnSelect('status')">Status</th>
+                                        <th>Edit</th>
+                                        <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
+                                            <i *ngIf="irany" class="fa fa-arrow-down"></i>
+                                        </th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <tr
-                                        *ngFor="let product of productList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
-                                        <td>{{product.id}}</td>
-                                        <td>{{product.name}} </td>
-                                        <td>{{product.type}}</td>
-                                        <td>{{product.catID}}</td>
-                                        <td>{{product.description}}</td>
-                                        <td>{{product.price}}</td>
-                                        <td> {{product.featured}} </td>
-                                        <td>{{product.active}} </td>
+                                        *ngFor="let order of orderList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
+                                        <td>{{order.id}}</td>
+                                        <td>{{order.customerId}} </td>
+                                        <td>{{order.productId}}</td>
+                                        <td>{{order.amount}}</td>
+                                        <td>{{order.status}}</td>
                                         <td>
                                             <div class="btn-group">
-                                                <button [routerLink]="[product.id]" class="btn btn-info">
+                                                <button [routerLink]="[order.id]" class="btn btn-info">
                                                     <i class="fa fa-pencil"></i>
                                                 </button>
-                                                <button (click)="onRemove(product)" class="btn btn-danger">
+                                                <button (click)="onDelete(order)" class="btn btn-danger">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </div>
                                         </td>
                                     </tr>
+                                    <!-- <tr
+                                *ngFor="let order of orderList | async">
+                                <td>{{order.id}}</td>
+                                <td>{{order.customerId}} </td>
+                                <td>{{order.productId}}</td>
+                                <td>{{order.amount}}</td>
+                                <td>{{order.status}}</td>
+                                <td></td>
+                            </tr> -->
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
                 </div>

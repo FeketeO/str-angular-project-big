@@ -1,0 +1,92 @@
+<div class="wrapper">
+  <app-sidebar></app-sidebar>
+  <div class="main-panel">
+      <app-navbar></app-navbar>
+      <div class="content">
+          <div class="row">
+              <div *ngIf="(customer$ | async) as customer" class="col-6 offset-3">
+                  <form #customerForm="ngForm" (ngSubmit)="onUpdate(customerForm, customer)">
+
+                    <div class="form-group">
+                      <label for="">Firtsname</label>
+                      <input required name="firstName" [(ngModel)]="customer.firstName" type="text" class="form-control"
+                          pattern=".{2,15}">
+                      <div [hidden]="customerForm.controls.firstName?.valid" class="error-message">
+                          A keresztnév minimum 2 és maximum 15 karakterből állhat!
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                     <label for="">Lastname</label>
+                     <input required name="lastName" [(ngModel)]="customer.lastName" type="text" class="form-control"
+                        pattern=".{2,20}">
+                    <div [hidden]="customerForm.controls.lastName?.valid" class="error-message">
+                        A vezetéknév minimum 2 és maximum 20 karakterből állhat!
+                    </div>
+                   </div>
+
+                  <div class="form-group">
+                      <label for="">Email</label>
+                      <input required name="email" [(ngModel)]="customer.email" type="text" class="form-control"
+                          pattern=".{2,25} ^\S+@\S+$">
+                      <div [hidden]="customerForm.controls.email?.valid" class="error-message">
+                          Az emailcím minimum 2 és maximum 25 karakterből állhat, és @-ot kell tartalmaznia!
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="">Zip</label>
+                      <input required name="zip" [(ngModel)]="customer.address.zip" type="number" class="form-control"
+                          pattern="^\d{4,7}$">
+                      <div [hidden]="customerForm.controls.zip?.valid" class="error-message">
+                          Az irányítószám szám minimum 4, maximum 7 számjegyű lehet!
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="">Country</label>
+                    <input required name="country" [(ngModel)]="customer.address.country" type="text" class="form-control"
+                        pattern=".{4,30}">
+                    <div [hidden]="customerForm.controls.country?.valid" class="error-message">
+                        Az ország  neve minimum 4 és maximum 30 karakterből állhat!
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                      <label for="">city</label>
+                      <input required name="city" [(ngModel)]="customer.address.city" type="text" class="form-control"
+                          pattern=".{2,30}">
+                      <div [hidden]="customerForm.controls.city?.valid" class="error-message">
+                          A város neve minimum 2 és maximum 30 karakterből állhat!
+                      </div>
+                    </div>
+
+                  <div class="form-group">
+                    <label for="">Street</label>
+                    <input required name="street" [(ngModel)]="customer.address.street" type="text" class="form-control"
+                        pattern=".{1,20}">
+                    <div [hidden]="customerForm.controls.street?.valid" class="error-message">
+                        Az utca neve minimum 2 és maximum 20 karakterből állhat!
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                      <label for="">Active</label>
+                      <input required name="active" [(ngModel)]="customer.active" type="text" class="form-control"
+                          pattern="(true|false)">
+                      <div [hidden]="customerForm.controls.active?.valid" class="error-message">
+                          Csak true vagy false lehet!
+                      </div>
+                  </div>
+
+                  <button [disabled]="customerForm.invalid || updating" type="submit"
+                      class="btn btn-primary btn-block btn-lg">
+                      <i *ngIf="!updating" class="fa fa-save"></i>
+                      <i *ngIf="updating" class="fa fa-refresh"></i>
+                  </button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
