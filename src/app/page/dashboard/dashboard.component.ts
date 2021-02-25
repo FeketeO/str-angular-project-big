@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
   cards: InfoCard[] = [
     {
       title: 'Customers',
-      content: '102',
+      content: '0',
       cardClass: 'card-header-warning',
       footer: 'ide is jön valami',
       icon: 'account_circle',
@@ -24,18 +24,18 @@ export class DashboardComponent implements OnInit {
       icon: 'store',
     },
     {
-      title: '3. card',
-      content: 'Hali',
-      cardClass: 'card-header-danger',
+      title: 'Orders',
+      content: '10',
+      cardClass: 'card-header-primary',
       footer: 'ide is jön valami',
-      icon: 'info_outline',
+      icon: 'shopping_cart',
     },
     {
-      title: '4. card',
-      content: 'Hali',
+      title: 'Followers',
+      content: '1',
       cardClass: 'card-header-info',
-      footer: 'ide is jön valami',
-      icon: 'update',
+      footer: 'Follow us!',
+      icon: 'pan_tool',
     },
   ]
 
