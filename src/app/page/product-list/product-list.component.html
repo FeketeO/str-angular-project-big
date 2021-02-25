@@ -43,7 +43,10 @@
                                     <th (click)="onColumnSelect('price')">Price</th>
                                     <th (click)="onColumnSelect('featured')">Featured</th>
                                     <th (click)="onColumnSelect('active')">Active</th>
-                                    <th></th>
+                                    <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
+                                        <i *ngIf="irany" class="fa fa-arrow-down"></i>
+
+                                    </th>
                                 </thead>
                                 <tbody>
                                     <tr
