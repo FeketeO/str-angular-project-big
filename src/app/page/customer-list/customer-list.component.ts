@@ -15,7 +15,7 @@ export class CustomerListComponent implements OnInit {
   irany: boolean = false;
   columnKey: string = '';
   filterKey: string = 'firstName';
-  filterKeys: string[] = Object.keys(new Customer()).concat(Object.keys(new Address()));
+  filterKeys: string[] = (Object.keys(new Customer()).concat(Object.keys(new Address()))).filter(item => !item.includes("address")).filter(item => !item.includes("notes"));
 
   customerList: BehaviorSubject<Customer[]> = this.customerService.list$;
   constructor(
