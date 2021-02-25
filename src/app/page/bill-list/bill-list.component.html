@@ -39,6 +39,9 @@
                                 <th (click)="onColumnSelect('amount')">Amount</th>
                                 <th (click)="onColumnSelect('status')">Status</th>
                                 <th>Edit</th>
+                                <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
+                                    <i *ngIf="irany" class="fa fa-arrow-down"></i>
+                                </th>
                             </thead>
                             <tbody>
                                 <tr
