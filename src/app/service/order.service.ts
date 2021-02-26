@@ -22,9 +22,9 @@ export class OrderService {
 
   /* sum(): void {
     this.http.get<Order[]>(this.orderUrl).subscribe(
-      data => this.list$.next(data)
+      data => data[0].amount + data[1].amount
     )
-  } */
+  }  */
   
   get(id: number | string): Observable<Order> {
     id = typeof id === 'string' ? parseInt(id, 10) : id;

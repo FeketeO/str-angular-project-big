@@ -16,6 +16,7 @@ import { CustomerListComponent } from './page/customer-list/customer-list.compon
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { SumPipe } from './pipe/sum.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DashboardComponent } from './page/dashboard/dashboard.component';
     CustomerListComponent,
     NavbarComponent,
     SidebarComponent,
-    DashboardComponent
+    DashboardComponent,
+    SumPipe
   ],
   imports: [
     BrowserModule,

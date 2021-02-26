@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Order } from 'src/app/model/order';
 import { OrderService } from 'src/app/service/order.service';
+import { map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-order-list',
@@ -27,10 +28,8 @@ export class OrderListComponent implements OnInit {
     this.orderService.getAll();
   }
 
-  /* sum(): number {
-    this.orderService.getAll();
-    return
-  } */
+  /* totals = this.orderList;
+  sum = this.totals.reduce((a,b)=>a+b); */
 
   onDelete(order: Order): void {
     this.orderService.remove(order),
