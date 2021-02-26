@@ -28,9 +28,9 @@
                   <div class="form-group">
                       <label for="">Email</label>
                       <input required name="email" [(ngModel)]="customer.email" type="text" class="form-control"
-                          pattern=".{2,25} ^\S+@\S+$">
+                          pattern=".{2,50}">
                       <div [hidden]="customerForm.controls.email?.valid" class="error-message">
-                          Az emailcím minimum 2 és maximum 25 karakterből állhat, és @-ot kell tartalmaznia!
+                          Az emailcím minimum 2 és maximum 50 karakterből állhat, és @-ot kell tartalmaznia!
                       </div>
                   </div>
 
@@ -80,7 +80,7 @@
                   </div>
 
                   <button [disabled]="customerForm.invalid || updating" type="submit"
-                      class="btn btn-primary btn-block btn-lg">
+                      class="btn btn-info btn-block btn-lg">
                       <i *ngIf="!updating" class="fa fa-save"></i>
                       <i *ngIf="updating" class="fa fa-refresh"></i>
                   </button>
