@@ -1,0 +1,71 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="main-panel">
+        <app-navbar></app-navbar>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-12 col-lg-5">
+                        <button class="btn btn-success btn-block" [routerLink]="[0]">
+                            <i class="fa fa-edit"></i>
+                            Add new bill
+                        </button>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <select [(ngModel)]="filterKey" class="form-control">
+                            <option *ngFor="let key of filterKeys" [value]="key">
+                                {{ key }}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search"
+                                (keyup)="onChangePhrase($event)">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Bill Table</h4>
+                        <p class="card-category"> All bills are listed below</p>
+                    </div>
+                    <div class="card-body text-center">
+                        <table class="table table-striped table-responsive-md">
+                            <thead class=" text-danger">
+                                <th (click)="onColumnSelect('id')">ID</th>
+                                <th (click)="onColumnSelect('orderID')">OrderID</th>
+                                <th (click)="onColumnSelect('amount')">Amount</th>
+                                <th (click)="onColumnSelect('status')">Status</th>
+                                <th>Edit</th>
+                                <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
+                                    <i *ngIf="irany" class="fa fa-arrow-down"></i>
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    *ngFor="let bill of billList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
+                                    <td>{{bill.id}}</td>
+                                    <td>{{bill.orderID}} </td>
+                                    <td>{{bill.amount}}</td>
+                                    <td>{{bill.status}}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button [routerLink]="[bill.id]" class="btn btn-info">
+                                                <i class="fa fa-pencil"></i>
+                                            </button>
+                                            <button (click)="onRemove(bill)" class="btn btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

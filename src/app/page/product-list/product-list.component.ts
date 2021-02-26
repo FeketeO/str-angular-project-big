@@ -28,7 +28,7 @@ productList: BehaviorSubject<Product[]> = this.productService.list$;
 
     onRemove(product:Product):void {
     this.productService.remove(product),
-    this.router.navigate([''])
+    this.router.navigate(['product'])
   }
   irany:boolean=false;
 columnKey:string='';
