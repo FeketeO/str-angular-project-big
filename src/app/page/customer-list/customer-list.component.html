@@ -1,37 +1,85 @@
-<div>
-  <h3>List of Customers</h3>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Adress</th>
-        <th>Email</th>
-        <th>Actice</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let customer of customerList | async">
-        <td>{{customer.id}}</td>
-        <td>{{customer.firstName}} </td>
-        <td>{{customer.lastName}}</td>
-        <td>{{customer.address.zip}}, {{customer.address.country}}, {{customer.address.city}}, {{customer.address.street}}, {{customer.address.notes}},</td>
-        <td>
-          <div class="btn-group">
-            <button class="btn btn-info">
-              <i class="fa fa-pencil"></i>
-            </button>
-            <button class="btn btn-danger">
-              <i class="fa fa-trash"></i>
-          </button>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="main-panel">
+        <app-navbar></app-navbar>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-5">
+                        <button class="btn btn-success btn-block" [routerLink]="[0]">
+                            <i class="fa fa-edit"></i>
+                            Add Customer
+                        </button>
+                    </div>
+                    <div class="col-12 col-lg-3 ">
+                        <select [(ngModel)]="filterKey" class="form-control">
+                            <option *ngFor="let key of filterKeys" [value]="key">
+                                {{ key }}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search"
+                                (keyup)="onChangePhrase($event)">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header card-header-info">
+                        <h4 class="card-title ">Costumer Table</h4>
+                        <p class="card-category"> All costumer are listed below</p>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-info">
+                                    <tr>
+                                        <th (click)="onColumnSelect('id')">ID</th>
+                                        <th (click)="onColumnSelect('firstName')">Firstname</th>
+                                        <th (click)="onColumnSelect('lastName')">Lastname</th>
+                                        <th (click)="onColumnSelect('address.zip')">ZIP</th>
+                                        <th (click)="onColumnSelect('address.country')">Country</th>
+                                        <th (click)="onColumnSelect('address.city')">City</th>
+                                        <th (click)="onColumnSelect('address.street')">Street</th>
+                                        <th (click)="onColumnSelect('email')">Email</th>
+                                        <th (click)="onColumnSelect('active')">Active</th>
+                                        <th>Edit</th>
+                                        <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
+                                            <i *ngIf="irany" class="fa fa-arrow-down"></i>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        *ngFor="let customer of customerList | async | filter:phrase:filterKey | sorter:columnKey:irany">
+                                        <td>{{customer.id}}</td>
+                                        <td>{{customer.firstName}}</td>
+                                        <td>{{customer.lastName}}</td>
+                                        <td>{{customer.address.zip}}</td>
+                                        <td>{{customer.address.country}}</td>
+                                        <td>{{customer.address.city}}</td>
+                                        <td>{{customer.address.street}}</td>
+                                        <td>{{customer.email}}</td>
+                                        <td>{{customer.active}}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button [routerLink]="[customer.id]" class="btn btn-info">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button (click)="onRemove(customer)" class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-

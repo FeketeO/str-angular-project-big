@@ -16,7 +16,13 @@ import { CustomerListComponent } from './page/customer-list/customer-list.compon
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
+<<<<<<< HEAD
 import { SumPipe } from './pipe/sum.pipe';
+=======
+import { EditCustomerComponent } from './page/edit-customer/edit-customer.component';
+import { InfoCardComponent } from './common/info-card/info-card.component';
+
+>>>>>>> origin/dev
 
 @NgModule({
   declarations: [
@@ -33,7 +39,12 @@ import { SumPipe } from './pipe/sum.pipe';
     NavbarComponent,
     SidebarComponent,
     DashboardComponent,
+<<<<<<< HEAD
     SumPipe
+=======
+    EditCustomerComponent,
+    InfoCardComponent
+>>>>>>> origin/dev
   ],
   imports: [
     BrowserModule,

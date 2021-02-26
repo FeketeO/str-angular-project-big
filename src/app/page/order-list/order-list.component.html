@@ -5,7 +5,6 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-
                     <div class="col-12 col-lg-5">
                         <button class="btn btn-success btn-block" [routerLink]="[0]">
                             <i class="fa fa-edit"></i>
@@ -32,17 +31,20 @@
                         <h4 class="card-title ">Order Table</h4>
                         <p class="card-category"> All orders are listed below</p>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <div class="table-responsive">
                             <table class="table">
-                                <thead class=" text-primary">
+                                <thead class="text-primary">
                                     <tr>
                                         <th (click)="onColumnSelect('id')">Id</th>
                                         <th (click)="onColumnSelect('customerId')">CustomerId</th>
                                         <th (click)="onColumnSelect('productId')">ProductId</th>
                                         <th (click)="onColumnSelect('amount')">Amount</th>
                                         <th (click)="onColumnSelect('status')">Status</th>
-                                        <th></th>
+                                        <th>Edit</th>
+                                        <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
+                                            <i *ngIf="irany" class="fa fa-arrow-down"></i>
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>

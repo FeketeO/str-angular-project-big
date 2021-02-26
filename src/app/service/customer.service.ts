@@ -9,7 +9,7 @@ import { Customer } from '../model/customer';
 })
 export class CustomerService {
 
-  apiUrl:string=`http://localhost:3000/customers`;
+  apiUrl:string=`http://localhost:3000/customer`;
   constructor(
     private http:HttpClient,
   ) { }
@@ -30,6 +30,15 @@ export class CustomerService {
   return of(new Customer())
     }
 
+    create(customer:Customer):void {
+      this.http.post<Customer>(
+        `${this.apiUrl}`,
+        customer
+        ).subscribe(
+          () =>this.getAll()
+        );
+       }
+
     update(customer:Customer):void {
   this.http.patch<Customer>(
     `${this.apiUrl}/${customer.id}`,
@@ -46,6 +55,7 @@ remove(customer:Customer):void {
     ).subscribe(
       () =>this.getAll()
     );
-
 }
+
+
 }
