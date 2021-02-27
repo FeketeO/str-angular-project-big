@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { groupBy, map, tap, switchMap } from 'rxjs/operators';
 import { Product } from 'src/app/model/product';
 import { ProductService } from '../../service/product.service';
 
@@ -10,15 +11,33 @@ import { ProductService } from '../../service/product.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+ 
+ productCount:number=0; 
+ productSum:number=0;
+
+ productfilter:{count:number}={count:0}
+ 
+ 
+   productList: BehaviorSubject<Product[]>|Observable<Product[]>= this.productService.list$.pipe(
+  map((products:Product[])=>products.filter(products=>products)),
+  tap(products=>this.productCount=products.length), 
+  tap(products=>this.productfilter.count=products.length), 
   
-productList: BehaviorSubject<Product[]> = this.productService.list$;
+    
+     );
+ 
+
+onget():void{
+   this.productService.getAll()
+ }
+
   constructor(
     private productService: ProductService,
     private router:Router,
   ) { }
 
 
-    filterKey: string = 'name';
+  filterKey: string = 'name';
   filterKeys: string[] = Object.keys(new Product());
 
 
@@ -36,11 +55,14 @@ onColumnSelect(key:string):void{
   this.columnKey=key;
   this.irany=!this.irany;
 }
+phrase:string='';
 
 onChangePhrase(event:any): void{
-this.phrase = (event.target as HTMLInputElement).value;
+    this.phrase = (event.target as HTMLInputElement).value;
+    
+
 }
-phrase:string='';
+
 
 
 
