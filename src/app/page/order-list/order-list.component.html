@@ -5,6 +5,7 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+
                     <div class="col-12 col-lg-5">
                         <button class="btn btn-success btn-block" [routerLink]="[0]">
                             <i class="fa fa-edit"></i>
@@ -48,11 +49,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let order of orderList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
+                                    <tr
+                                        *ngFor="let order of orderList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
                                         <td>{{order.id}}</td>
                                         <td>{{order.customerId}} </td>
                                         <td>{{order.productId}}</td>
-                                        <td>{{order.amount}}</td>
+                                        <td>{{order.amount}} Ft</td>
                                         <td>{{order.status}}</td>
                                         <td>
                                             <div class="btn-group">
@@ -65,17 +67,13 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr *ngFor="let order of orderList | async | sum">
-                                        <td>{{order.id}}</td>
-                                        <td>{{order.customerId}} </td>
-                                        <td>{{order.productId}}</td>
-                                        <td>{{order.amount}}</td>
-                                        <td>{{order.status}}</td>
-                                        
-                                        
-                                        <td>
-                                            
-                                        </td>
+                                    <tr>
+                                        <td>Összesen</td>
+                                        <td>{{darab|json}} db</td>
+                                        <td>{{darab|json}} db</td>
+                                        <td>{{summa|json}} Ft</td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>

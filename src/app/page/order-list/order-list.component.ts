@@ -3,7 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Order } from 'src/app/model/order';
 import { OrderService } from 'src/app/service/order.service';
-import { map} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-order-list',
@@ -12,28 +12,46 @@ import { map} from 'rxjs/operators';
 })
 export class OrderListComponent implements OnInit {
   orderList: BehaviorSubject<Order[]> = this.orderService.list$;
-
+  orderListsum$: Observable<Order[]> = this.orderService.getAllsum();
   columnKey: string = '';
   phrase: string = '';
   filterKey: string = 'amount';
   filterKeys: string[] = Object.keys(new Order());
   irany: boolean = false;
-
+  summa:any;
+  darab:any;
   constructor(
     private orderService: OrderService,
     private router: Router,
+    
   ) { }
 
   ngOnInit(): void {
     this.orderService.getAll();
+    this.sum();
+    this.db();
   }
 
-  /* totals = this.orderList;
-  sum = this.totals.reduce((a,b)=>a+b); */
+  sum(): void {
+    this.orderService.getAllsum().subscribe(data =>{
+      this.summa = data
+      .map(item=>item.amount)
+      .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
+    })
+  }
 
-  onDelete(order: Order): void {
+  db(): void {
+    this.orderService.getAllsum().subscribe(data =>{
+      this.darab = data
+      .map(item=>item.id)
+      .length;
+    })
+  }
+
+  onDelete(order: Order): void {    
     this.orderService.remove(order),
-      this.router.navigate(['order'])
+      this.router.navigate(['order']);
+      
   }
 
   onColumnSelect(key: string): void {
@@ -44,6 +62,8 @@ export class OrderListComponent implements OnInit {
   onChangePhrase(event: any): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
+
+  
 
 }
 

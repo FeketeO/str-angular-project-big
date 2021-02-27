@@ -9,7 +9,7 @@ import { Order } from '../model/order';
 export class OrderService {
   orderUrl: string = 'http://localhost:3000/orders';
   list$: BehaviorSubject<Order[]> = new BehaviorSubject<Order[]>([]);
-
+  listsum$: Observable<Order[]> = this.getAllsum();
   constructor(
     private http: HttpClient,
   ) { }
@@ -19,13 +19,12 @@ export class OrderService {
       data => this.list$.next(data)
     )
   }
+  getAllsum(): Observable<Order[]> {
+    return this.http.get<Order[]>(this.orderUrl);
+    
+  }
 
-  /* sum(): void {
-    this.http.get<Order[]>(this.orderUrl).subscribe(
-      data => data[0].amount + data[1].amount
-    )
-  }  */
-  
+    
   get(id: number | string): Observable<Order> {
     id = typeof id === 'string' ? parseInt(id, 10) : id;
     if (id !== 0) {
