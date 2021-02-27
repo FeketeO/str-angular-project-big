@@ -16,18 +16,27 @@ export class ProductListComponent implements OnInit {
  productSum:number=0;
 
  productfilter:{count:number}={count:0}
+  sumfilter:{sum:number}={sum:0};
  
- 
-   productList: BehaviorSubject<Product[]>|Observable<Product[]>= this.productService.list$.pipe(
-  map((products:Product[])=>products.filter(products=>products)),
-  tap(products=>this.productCount=products.length), 
-  tap(products=>this.productfilter.count=products.length), 
-  
-    
-     );
- 
+ productList: BehaviorSubject<Product[]>| Observable<Product[]>= this.productService.list$.pipe(
+   //map(products:Product[]=>products.filter(products=>products)),
+   tap(products=>this.productCount=products.length), 
+   tap(products=>this.productfilter.count=products.length), 
+      
+   )
+   
+   
+  summa2:number=0;
 
-onget():void{
+  productList2= this.productService.list2$.subscribe(data =>{
+      this.summa2 = data
+      .map(item=>item.price)
+      .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
+    })
+  
+  
+  
+ onget():void{
    this.productService.getAll()
  }
 
@@ -43,6 +52,8 @@ onget():void{
 
   ngOnInit(): void {
      this.productService.getAll();
+    //  this.sum();
+    //  this.db();
   }
 
     onRemove(product:Product):void {
@@ -62,7 +73,32 @@ onChangePhrase(event:any): void{
     
 
 }
+//  summa:number=0;
+//   darab:any;
 
+  //   sum(): void {
+  //   this.productList2.subscribe(data =>{
+  //     this.summa = data
+  //     .map(item=>item.price)
+  //     .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
+  //   })
+  // }
+
+  //   sum(): void {
+  //   this.productService.getAllsum().subscribe(data =>{
+  //     this.summa = data
+  //     .map(item=>item.price)
+  //     .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
+  //   })
+  // }
+
+  // db(): void {
+  //   this.productList2.subscribe(data =>{
+  //     this.darab = data
+  //     .map(item=>item.id)
+  //     .length;
+  //   })
+  // }
 
 
 
