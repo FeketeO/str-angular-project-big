@@ -51,7 +51,7 @@
                                 </thead>
                                 <tbody>
                                     <tr
-                                        *ngFor="let product of productList | async | filter:phrase:filterKey:productfilter:sumfilter  | sorter:columnKey:irany">
+                                        *ngFor="let product of productList | async | filter:phrase:filterKey:productfilter  | sorter:columnKey:irany">
                                         <td>{{product.id}}</td>
                                         <td>{{product.name}} </td>
                                         <td>{{product.type}}</td>

@@ -5,12 +5,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
- transform(value: any[] | null , phrase: string, key: string = 'name', props?:{count:number}): any[] | null{
+ transform(value: 
+  any[] | null ,
+  phrase: string,
+  key: string = 'name',
+  props?:{count:number
+  }): any[] | null{
    
      if(!Array.isArray(value) || !phrase || !key ){
       if(Array.isArray(value) && !phrase && props?.count){
 
         props.count=value.length
+        
       }
       return value;
      }

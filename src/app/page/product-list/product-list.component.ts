@@ -28,13 +28,23 @@ export class ProductListComponent implements OnInit {
    
   summa2:number=0;
 
-  productList2= this.productService.list2$.subscribe(data =>{
+  // productList2= this.productService.list2$.subscribe(data =>{
+  //     this.summa2 = data
+  //     .map(item=>item.price)
+  //     .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
+  //   })
+  
+   sum(): void {
+    this.productService.list2$.subscribe(data => {
       this.summa2 = data
-      .map(item=>item.price)
-      .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
+        .map(item => item.price)
+        .reduce((x, y) => parseInt('' + x) + parseInt('' + y));
     })
-  
-  
+  }
+
+
+
+
   
  onget():void{
    this.productService.getAll()
@@ -52,12 +62,14 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
      this.productService.getAll();
-    //  this.sum();
+     this.productService.getAllsum();
+     this.sum();
     //  this.db();
   }
 
     onRemove(product:Product):void {
     this.productService.remove(product),
+    this.sum(),
     this.router.navigate(['product'])
   }
   irany:boolean=false;
@@ -70,6 +82,7 @@ phrase:string='';
 
 onChangePhrase(event:any): void{
     this.phrase = (event.target as HTMLInputElement).value;
+    this.sum();
     
 
 }
