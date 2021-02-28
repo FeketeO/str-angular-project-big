@@ -4,8 +4,11 @@
         <app-navbar></app-navbar>
         <div class="content">
             <div class="container-fluid">
+                
                 <div class="row">
-
+                    <div *ngIf="alertSuccess" class="alert alert-success">Sikeresen törölve</div>
+                </div>
+                <div class="row">
                     <div class="col-12 col-lg-5">
                         <button class="btn btn-success btn-block" [routerLink]="[0]">
                             <i class="fa fa-edit"></i>
