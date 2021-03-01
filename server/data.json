@@ -571,6 +571,27 @@
       "productId": "8668",
       "amount": 1406185,
       "status": "shipped"
+    },
+    {
+      "id": 21,
+      "customerId": 15,
+      "productId": 17,
+      "amount": 50,
+      "status": "shipped"
+    },
+    {
+      "id": 22,
+      "customerId": 26,
+      "productId": 42,
+      "amount": 110,
+      "status": "paid"
+    },
+    {
+      "id": 23,
+      "customerId": 0,
+      "productId": 0,
+      "amount": 0,
+      "status": "new"
     }
   ],
   "bills": [

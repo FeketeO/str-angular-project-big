@@ -60,8 +60,9 @@
                                                 <button [routerLink]="[order.id]" class="btn btn-info">
                                                     <i class="fa fa-pencil"></i>
                                                 </button>
-                                                <button (click)="onDelete(order)" class="btn btn-danger">
-                                                    <i class="fa fa-trash"></i>
+                                                <button (click)="onDelete(order)" class="btn btn-danger">                                                    
+                                                    <i *ngIf="!update" class="fa fa-trash"></i>
+                                                    <i *ngIf="update" class="fa fa-refresh"></i>
                                                 </button>
                                             </div>
                                         </td>

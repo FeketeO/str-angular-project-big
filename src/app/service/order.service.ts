@@ -17,6 +17,7 @@ export class OrderService {
   getAll(): void {
     this.http.get<Order[]>(this.orderUrl).subscribe(
       data => this.list$.next(data)
+      // error=>this.showError()
     )
   }
 
@@ -52,4 +53,10 @@ export class OrderService {
         () => this.getAll()
       );
   }
+
+  /* showError(): void {
+    this.toastr.error('Something is wrong', 'Error', {
+      timeOut: 3000,
+    });
+  } */
 }

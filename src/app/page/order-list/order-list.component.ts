@@ -20,6 +20,8 @@ export class OrderListComponent implements OnInit {
   irany: boolean = false;
   summa: any;
   piece: any;
+  update: boolean = false;
+
   constructor(
     private orderService: OrderService,
     private router: Router,
@@ -31,7 +33,7 @@ export class OrderListComponent implements OnInit {
     this.sum();
     this.pc();
     this.showSuccess();
-    this.showError();
+    //this.showError();
   }
 
   sum(): void {
@@ -39,7 +41,8 @@ export class OrderListComponent implements OnInit {
       this.summa = data
         .map(item => item.amount)
         .reduce((x, y) => parseInt('' + x) + parseInt('' + y));
-    })
+    },
+    error=>this.showError())
   }
 
   pc(): void {
@@ -47,13 +50,16 @@ export class OrderListComponent implements OnInit {
       this.piece = data
         .map(item => item.id)
         .length;
-    })
-  }
+    },
+    error=>this.showError())
+  } 
 
   onDelete(order: Order): void {
+    this.update = true;
     this.orderService.remove(order),
-      this.router.navigate(['order'])
-  }
+      this.router.navigate(['order']),
+      this.update = true;
+  }  
 
   onColumnSelect(key: string): void {
     this.columnKey = key;
@@ -65,7 +71,7 @@ export class OrderListComponent implements OnInit {
   }
 
   showSuccess(): void {
-    this.toastr.success("Action succeeded!", 'Toastr fun!', {
+    this.toastr.success("Action succeeded!", 'Success', {
       timeOut: 3000,
     });
   }
