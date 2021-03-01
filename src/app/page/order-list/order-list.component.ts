@@ -58,7 +58,7 @@ export class OrderListComponent implements OnInit {
     this.update = true;
     this.orderService.remove(order),
       this.router.navigate(['order']),
-      this.update = true;
+      this.update = false;
   }  
 
   onColumnSelect(key: string): void {
