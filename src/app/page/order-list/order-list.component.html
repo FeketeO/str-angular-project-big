@@ -66,15 +66,14 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <!-- <tr
-                                *ngFor="let order of orderList | async">
-                                <td>{{order.id}}</td>
-                                <td>{{order.customerId}} </td>
-                                <td>{{order.productId}}</td>
-                                <td>{{order.amount}}</td>
-                                <td>{{order.status}}</td>
-                                <td></td>
-                            </tr> -->
+                                    <tr>
+                                        <td>Összesen</td>
+                                        <td>{{piece|json}} db</td>
+                                        <td>{{piece|json}} db</td>
+                                        <td>{{summa|json}} Ft</td>
+                                        <td>{{piece|json}} db</td>
+                                        <td></td>
+                                    </tr>
                                 </tbody>
                             </table>
 
