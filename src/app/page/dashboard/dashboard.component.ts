@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { InfoCard } from 'src/app/common/info-card/info-card.component';
 
 @Component({
@@ -7,6 +7,8 @@ import { InfoCard } from 'src/app/common/info-card/info-card.component';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
+
 
   cards: InfoCard[] = [
     {
