@@ -649,21 +649,8 @@
       "active": false
     },
     {
-      "id": 3,
-      "firstName": "Ferdinande",
-      "lastName": "Rackstraw",
-      "address": {
-        "zip": 21040,
-        "country": "Philippines",
-        "city": "Pilar",
-        "street": "Sutteridge"
-      },
-      "email": "frackstraw2@seesaa.net",
-      "active": true
-    },
-    {
       "id": 4,
-      "firstName": "Elaina",
+      "firstName": "Ela",
       "lastName": "Izat",
       "address": {
         "zip": 20222,
@@ -689,7 +676,7 @@
     },
     {
       "id": 6,
-      "firstName": "See",
+      "firstName": "Kim",
       "lastName": "Glendenning",
       "address": {
         "zip": 12936,
