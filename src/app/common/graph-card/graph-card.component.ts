@@ -1,5 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+export interface GraphCard {
+ cardClass: string;
+ id: string;
+ title: string
+ comment: string;
+ footer: string;
+}
+
 @Component({
   selector: 'app-graph-card',
   templateUrl: './graph-card.component.html',
@@ -7,11 +15,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GraphCardComponent implements OnInit {
 
-  @Input() cardClass: string='card-header-success';
-  @Input() title: string='';
-  @Input() sales: number=0;
-  @Input() comment: string='% increase in today sales.';
-  @Input() footer: string='updated 12 minutes ago';
+  @Input() cardClass: string='';
+  @Input() id: string='';
+  @Input() title: string='title';
+  @Input() comment: string='';
+  @Input() footer: string='';
 
   constructor() { }
 

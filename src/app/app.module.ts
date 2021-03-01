@@ -18,6 +18,7 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { EditCustomerComponent } from './page/edit-customer/edit-customer.component';
 import { InfoCardComponent } from './common/info-card/info-card.component';
+import { GraphCardComponent } from './common/graph-card/graph-card.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
@@ -40,6 +41,7 @@ import { CommonModule } from '@angular/common';
     DashboardComponent,
     EditCustomerComponent,
     InfoCardComponent,
+    GraphCardComponent,
 
   ],
   imports: [
@@ -48,7 +50,7 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     FormsModule,
     CommonModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
   ],
   providers: [],
