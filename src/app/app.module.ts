@@ -18,10 +18,11 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { EditCustomerComponent } from './page/edit-customer/edit-customer.component';
 import { InfoCardComponent } from './common/info-card/info-card.component';
-import { StockChartModule } from '@syncfusion/ej2-angular-charts';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
+import { GoogleChartsModule } from 'angular-google-charts';
 import { DiagramComponent } from './common/diagram/diagram.component';
 
 @NgModule({
@@ -47,10 +48,11 @@ import { DiagramComponent } from './common/diagram/diagram.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule, 
-    StockChartModule,
+    FormsModule,
+    GoogleChartsModule,
     BrowserAnimationsModule,
-    CommonModule,    
+    CommonModule,
+    
     ToastrModule.forRoot(),
   ],
   providers: [],
