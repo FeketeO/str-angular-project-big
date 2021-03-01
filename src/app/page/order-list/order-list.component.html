@@ -5,7 +5,7 @@
         <div class="content">
             <app-diagram></app-diagram>
               <div class="container-fluid">
-                <app-diagram></app-diagram>                
+                              
                 <div class="row">
                     <div class="col-12 col-lg-5">
                         <button class="btn btn-success btn-block" [routerLink]="[0]">
@@ -59,10 +59,10 @@
                                         <td>{{order.status}}</td>
                                         <td>
                                             <div class="btn-group">
-                                                <button [routerLink]="[order.id]" class="btn btn-info">
+                                                <button [routerLink]="[order.id]" (click)=showSuccess() class="btn btn-info">
                                                     <i class="fa fa-pencil"></i>
                                                 </button>
-                                                <button (click)="onDelete(order)" class="btn btn-danger">
+                                                <button (click)="onDelete(order)" (click)=showSuccess() class="btn btn-danger">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </div>

@@ -30,9 +30,7 @@ export class OrderListComponent implements OnInit {
   ngOnInit(): void {
     this.orderService.getAll();
     this.sum();
-    this.db();
-    this.showSuccess();
-    this.showError();
+    this.db();    
   }
 
   sum(): void {
