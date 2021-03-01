@@ -37,6 +37,9 @@ export class CustomerListComponent implements OnInit {
     this.irany = !this.irany;
   }
 
+
+
+
   onChangePhrase(event: any): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
