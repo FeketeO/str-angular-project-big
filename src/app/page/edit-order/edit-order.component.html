@@ -11,7 +11,7 @@
                             <div class="form-group">
                                 <label for="customerId">CustomerId</label>
                                 <input id="customerId" name="customerId" [(ngModel)]="order.customerId" type="number"
-                                    class="form-control" pattern="\d{1,10}" required>
+                                    class="form-control" pattern="[1-9]\d{0,9}" required>
                                 <div [hidden]="orderForm.controls.customerId?.valid" class="error-message">
                                     A customerId minimum 1 és maximum 10 számjegyből állhat!
                                 </div>
@@ -19,7 +19,7 @@
                             <div class="form-group">
                                 <label for="productId">ProductId</label>
                                 <input id="productId" name="productId" [(ngModel)]="order.productId" type="number"
-                                    class="form-control" pattern="\d{1,10}" required>
+                                    class="form-control" pattern="[1-9]\d{0,9}" required>
                                 <div [hidden]="orderForm.controls.productId?.valid" class="error-message">
                                     A productId minimum 1 és maximum 10 számjegyből állhat!
                                 </div>
@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <label for="amount">Amount</label>
                                 <input id="amount" name="amount" [(ngModel)]="order.amount" type="number"
-                                    class="form-control" pattern="\d{1,10}" required>
+                                    class="form-control" pattern="[1-9]\d{0,9}" required>
                                 <div [hidden]="orderForm.controls.amount?.valid" class="error-message">
                                     Az összeg minimum 1 és maximum 10 számjegyből állhat!
                                 </div>

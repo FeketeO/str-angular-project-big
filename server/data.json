@@ -433,14 +433,28 @@
   ],
   "orders": [
     {
+      "id": 3,
+      "customerId": 65,
+      "productId": 23,
+      "amount": 17000,
+      "status": "shipped"
+    },
+    {
       "id": 4,
       "customerId": 18,
       "productId": 12,
-      "amount": 17778500,
-      "status": "paid"
+      "amount": 1777850,
+      "status": "shipped"
     },
     {
       "id": 5,
+      "customerId": 3,
+      "productId": 5,
+      "amount": 1888007,
+      "status": "shipped"
+    },
+    {
+      "id": 6,
       "customerId": 3,
       "productId": 5,
       "amount": 1888007,
@@ -480,6 +494,34 @@
       "productId": 12,
       "amount": 1300000,
       "status": "new"
+    },
+    {
+      "id": 21,
+      "customerId": 15,
+      "productId": 17,
+      "amount": 50,
+      "status": "shipped"
+    },
+    {
+      "id": 22,
+      "customerId": 26,
+      "productId": 42,
+      "amount": 110,
+      "status": "paid"
+    },
+    {
+      "id": 24,
+      "customerId": 9,
+      "productId": 17,
+      "amount": 8,
+      "status": "new"
+    },
+    {
+      "id": 25,
+      "customerId": 13,
+      "productId": 10,
+      "amount": 12,
+      "status": "shipped"
     }
   ],
   "bills": [
@@ -639,32 +681,25 @@
       "id": 1,
       "firstName": "Rheabataki",
       "lastName": "Gumm",
-      "zip": 8056,
-      "country": "Philippines",
-      "city": "Pogonsili",
-      "street": "Arapahoe",
+      "address": {
+        "zip": 8056,
+        "country": "Philippines",
+        "city": "Pogonsili",
+        "street": "Arapahoe"
+      },
       "email": "rgumm0@oracle.com",
       "active": false
     },
     {
-      "id": 3,
-      "firstName": "Ferdinande",
-      "lastName": "Rackstraw",
-      "zip": 21040,
-      "country": "Philippines",
-      "city": "Pilar",
-      "street": "Sutteridge",
-      "email": "frackstraw2@seesaa.net",
-      "active": true
-    },
-    {
       "id": 4,
-      "firstName": "Elaina",
+      "firstName": "Ela",
       "lastName": "Izat",
-      "zip": 20222,
-      "country": "Indonesia",
-      "city": "Singosari",
-      "street": "Dunning",
+      "address": {
+        "zip": 20222,
+        "country": "Indonesia",
+        "city": "Singosari",
+        "street": "Dunning"
+      },
       "email": "eizat3@forbes.com",
       "active": true
     },
@@ -672,21 +707,25 @@
       "id": 5,
       "firstName": "Brandtr",
       "lastName": "Navein",
-      "zip": 13291,
-      "country": "Indonesia",
-      "city": "Awilega",
-      "street": "Messerschmidt",
+      "address": {
+        "zip": 13291,
+        "country": "Indonesia",
+        "city": "Awilega",
+        "street": "Messerschmidt"
+      },
       "email": "bnavein4@php.net",
       "active": false
     },
     {
       "id": 6,
-      "firstName": "See",
+      "firstName": "Kim",
       "lastName": "Glendenning",
-      "zip": 12936,
-      "country": "China",
-      "city": "Yangdang",
-      "street": "North",
+      "address": {
+        "zip": 12936,
+        "country": "China",
+        "city": "Yangdang",
+        "street": "North"
+      },
       "email": "sglendenning5@bigcartel.com",
       "active": true
     },
@@ -694,10 +733,12 @@
       "id": 7,
       "firstName": "Ranique",
       "lastName": "Tebbitt",
-      "zip": 24743,
-      "country": "Palestinian Territory",
-      "city": "Zubūbah",
-      "street": "Buhler",
+      "address": {
+        "zip": 24743,
+        "country": "Palestinian Territory",
+        "city": "Zubūbah",
+        "street": "Buhler"
+      },
       "email": "rtebbitt6@fastcompany.com",
       "active": true
     },
@@ -705,10 +746,12 @@
       "id": 8,
       "firstName": "Winn",
       "lastName": "Bourhill",
-      "zip": 27673,
-      "country": "Indonesia",
-      "city": "Wonodadi",
-      "street": "Briar Crest",
+      "address": {
+        "zip": 27673,
+        "country": "Indonesia",
+        "city": "Wonodadi",
+        "street": "Briar Crest"
+      },
       "email": "wbourhill7@elegantthemes.com",
       "active": true
     },
@@ -716,10 +759,12 @@
       "id": 9,
       "firstName": "Barb",
       "lastName": "Baudoux",
-      "zip": 4717,
-      "country": "Greece",
-      "city": "Néa Manolás",
-      "street": "Eastlawn",
+      "address": {
+        "zip": 4717,
+        "country": "Greece",
+        "city": "Néa Manolás",
+        "street": "Eastlawn"
+      },
       "email": "bbaudoux8@uol.com.br",
       "active": true
     },
@@ -727,10 +772,12 @@
       "id": 10,
       "firstName": "Marcy",
       "lastName": "McSkin",
-      "zip": 24463,
-      "country": "Honduras",
-      "city": "La Guama",
-      "street": "Hoffman",
+      "address": {
+        "zip": 24463,
+        "country": "Honduras",
+        "city": "La Guama",
+        "street": "Hoffman"
+      },
       "email": "mmcskin9@phoca.cz",
       "active": false
     },
@@ -738,10 +785,12 @@
       "id": 11,
       "firstName": "Lionel",
       "lastName": "Beneix",
-      "zip": 7022,
-      "country": "China",
-      "city": "Hekou",
-      "street": "Ridge Oak",
+      "address": {
+        "zip": 7022,
+        "country": "China",
+        "city": "Hekou",
+        "street": "Ridge Oak"
+      },
       "email": "lbeneixa@mlb.com",
       "active": true
     },
@@ -749,10 +798,12 @@
       "id": 12,
       "firstName": "Addie",
       "lastName": "Learoyde",
-      "zip": 19679,
-      "country": "Philippines",
-      "city": "Liboran",
-      "street": "Sundown",
+      "address": {
+        "zip": 19679,
+        "country": "Philippines",
+        "city": "Liboran",
+        "street": "Sundown"
+      },
       "email": "alearoydeb@furl.net",
       "active": true
     },
@@ -760,10 +811,12 @@
       "id": 13,
       "firstName": "Floyd",
       "lastName": "O'Quin",
-      "zip": 19050,
-      "country": "China",
-      "city": "Kaiyuan",
-      "street": "Dottie",
+      "address": {
+        "zip": 19050,
+        "country": "China",
+        "city": "Kaiyuan",
+        "street": "Dottie"
+      },
       "email": "foquinc@slate.com",
       "active": false
     },
@@ -771,10 +824,12 @@
       "id": 14,
       "firstName": "Tobe",
       "lastName": "Mallinder",
-      "zip": 4797,
-      "country": "United States",
-      "city": "Louisville",
-      "street": "Carioca",
+      "address": {
+        "zip": 4797,
+        "country": "United States",
+        "city": "Louisville",
+        "street": "Carioca"
+      },
       "email": "tmallinderd@java.com",
       "active": false
     },
@@ -782,10 +837,12 @@
       "id": 15,
       "firstName": "Skipper",
       "lastName": "Japp",
-      "zip": 21517,
-      "country": "China",
-      "city": "Xiache",
-      "street": "Sheridan",
+      "address": {
+        "zip": 21517,
+        "country": "China",
+        "city": "Xiache",
+        "street": "Sheridan"
+      },
       "email": "sjappe@scribd.com",
       "active": true
     },
@@ -793,10 +850,12 @@
       "id": 16,
       "firstName": "Twila",
       "lastName": "Lampett",
-      "zip": 2524,
-      "country": "Belarus",
-      "city": "Mstsislaw",
-      "street": "Blackbird",
+      "address": {
+        "zip": 2524,
+        "country": "Belarus",
+        "city": "Mstsislaw",
+        "street": "Blackbird"
+      },
       "email": "tlampettf@addtoany.com",
       "active": true
     },
@@ -804,10 +863,12 @@
       "id": 17,
       "firstName": "Karney",
       "lastName": "Tasker",
-      "zip": 7738,
-      "country": "Madagascar",
-      "city": "Fandriana",
-      "street": "Oakridge",
+      "address": {
+        "zip": 7738,
+        "country": "Madagascar",
+        "city": "Fandriana",
+        "street": "Oakridge"
+      },
       "email": "ktaskerg@hatena.ne.jp",
       "active": false
     },
@@ -815,10 +876,12 @@
       "id": 18,
       "firstName": "Shannen",
       "lastName": "Chetter",
-      "zip": 23622,
-      "country": "Sweden",
-      "city": "Karlshamn",
-      "street": "Annamark",
+      "address": {
+        "zip": 23622,
+        "country": "Sweden",
+        "city": "Karlshamn",
+        "street": "Annamark"
+      },
       "email": "schetterh@netlog.com",
       "active": true
     },
@@ -826,10 +889,12 @@
       "id": 19,
       "firstName": "Debbie",
       "lastName": "Brewitt",
-      "zip": 21211,
-      "country": "Cuba",
-      "city": "Cabaiguán",
-      "street": "Fisk",
+      "address": {
+        "zip": 21211,
+        "country": "Cuba",
+        "city": "Cabaiguán",
+        "street": "Fisk"
+      },
       "email": "dbrewitti@nba.com",
       "active": false
     },
@@ -837,10 +902,12 @@
       "id": 20,
       "firstName": "Henrieta",
       "lastName": "Cornilli",
-      "zip": 10385,
-      "country": "Vietnam",
-      "city": "Núi Đối",
-      "street": "Northport",
+      "address": {
+        "zip": 10385,
+        "country": "Vietnam",
+        "city": "Núi Đối",
+        "street": "Northport"
+      },
       "email": "hcornillij@ucla.edu",
       "active": true
     },
@@ -848,10 +915,12 @@
       "id": 21,
       "firstName": "Byron",
       "lastName": "Feld",
-      "zip": 7304,
-      "country": "Indonesia",
-      "city": "Kangin",
-      "street": "Larry,",
+      "address": {
+        "zip": 7304,
+        "country": "Indonesia",
+        "city": "Kangin",
+        "street": "Larry"
+      },
       "email": "bfeldk@netlog.com",
       "active": true
     },
@@ -859,10 +928,12 @@
       "id": 22,
       "firstName": "Fey",
       "lastName": "Demougeot",
-      "zip": 4796,
-      "country": "Russia",
-      "city": "Sovetskoye",
-      "street": "Maple",
+      "address": {
+        "zip": 4796,
+        "country": "Russia",
+        "city": "Sovetskoye",
+        "street": "Maple"
+      },
       "email": "fdemougeotl@nationalgeographic.com",
       "active": true
     },
@@ -870,10 +941,12 @@
       "id": 23,
       "firstName": "Konstantin",
       "lastName": "Barhems",
-      "zip": 5048,
-      "country": "Vietnam",
-      "city": "Phú Khương",
-      "street": "Mandrake",
+      "address": {
+        "zip": 5048,
+        "country": "Vietnam",
+        "city": "Phú Khương",
+        "street": "Mandrake"
+      },
       "email": "kbarhemsm@miitbeian.gov.cn",
       "active": false
     },
@@ -881,10 +954,12 @@
       "id": 24,
       "firstName": "Brnaba",
       "lastName": "Adamou",
-      "zip": 9160,
-      "country": "New Zealand",
-      "city": "Gore",
-      "street": "Prairieview",
+      "address": {
+        "zip": 9160,
+        "country": "New Zealand",
+        "city": "Gore",
+        "street": "Prairieview"
+      },
       "email": "badamoun@economist.com",
       "active": false
     },
@@ -892,10 +967,12 @@
       "id": 25,
       "firstName": "Ruthe",
       "lastName": "Aymes",
-      "zip": 27428,
-      "country": "France",
-      "city": "Nogent-sur-Marne",
-      "street": "Havey",
+      "address": {
+        "zip": 27428,
+        "country": "France",
+        "city": "Nogent-sur-Marne",
+        "street": "Havey"
+      },
       "email": "raymeso@economist.com",
       "active": false
     },
@@ -903,10 +980,12 @@
       "id": 26,
       "firstName": "Geoffrey",
       "lastName": "Plews",
-      "zip": 6847,
-      "country": "Ecuador",
-      "city": "Azogues",
-      "street": "Maple",
+      "address": {
+        "zip": 6847,
+        "country": "Ecuador",
+        "city": "Azogues",
+        "street": "Maple"
+      },
       "email": "gplewsp@time.com",
       "active": false
     },
@@ -914,10 +993,12 @@
       "id": 27,
       "firstName": "Buddie",
       "lastName": "Scathard",
-      "zip": 26791,
-      "country": "Iran",
-      "city": "Arāk",
-      "street": "Vera",
+      "address": {
+        "zip": 26791,
+        "country": "Iran",
+        "city": "Arāk",
+        "street": "Vera"
+      },
       "email": "bscathardq@wikipedia.org",
       "active": true
     },
@@ -925,10 +1006,12 @@
       "id": 28,
       "firstName": "Caryl",
       "lastName": "Antoniat",
-      "zip": 13380,
-      "country": "Poland",
-      "city": "Susiec",
-      "street": "Almo",
+      "address": {
+        "zip": 13380,
+        "country": "Poland",
+        "city": "Susiec",
+        "street": "Almo"
+      },
       "email": "cantoniatr@ted.com",
       "active": false
     },
@@ -936,10 +1019,12 @@
       "id": 29,
       "firstName": "Durward",
       "lastName": "Belchamber",
-      "zip": 29604,
-      "country": "China",
-      "city": "Xuanhua",
-      "street": "Waubesa",
+      "address": {
+        "zip": 29604,
+        "country": "China",
+        "city": "Xuanhua",
+        "street": "Waubesa"
+      },
       "email": "dbelchambers@ted.com",
       "active": false
     },
@@ -947,10 +1032,12 @@
       "id": 30,
       "firstName": "Thia",
       "lastName": "Milliere",
-      "zip": 4231,
-      "country": "China",
-      "city": "Aimin",
-      "street": "Waywood",
+      "address": {
+        "zip": 4231,
+        "country": "China",
+        "city": "Aimin",
+        "street": "Waywood"
+      },
       "email": "tmillieret@github.io",
       "active": false
     },
@@ -958,10 +1045,12 @@
       "id": 31,
       "firstName": "Christye",
       "lastName": "Westcott",
-      "zip": 29959,
-      "country": "Thailand",
-      "city": "Bamnet Narong",
-      "street": "Dakota",
+      "address": {
+        "zip": 29959,
+        "country": "Thailand",
+        "city": "Bamnet Narong",
+        "street": "Dakota"
+      },
       "email": "cwestcottu@icq.com",
       "active": false
     },
@@ -969,10 +1058,12 @@
       "id": 32,
       "firstName": "Charmane",
       "lastName": "Jickells",
-      "zip": 18222,
-      "country": "Finland",
-      "city": "Länsi-Turunmaa",
-      "street": "Merrick",
+      "address": {
+        "zip": 18222,
+        "country": "Finland",
+        "city": "Länsi-Turunmaa",
+        "street": "Merrick"
+      },
       "email": "cjickellsv@senate.gov",
       "active": false
     },
@@ -980,10 +1071,12 @@
       "id": 33,
       "firstName": "Sancho",
       "lastName": "Rodenhurst",
-      "zip": 2096,
-      "country": "Slovenia",
-      "city": "Apače",
-      "street": "Haas",
+      "address": {
+        "zip": 2096,
+        "country": "Slovenia",
+        "city": "Apače",
+        "street": "Haas"
+      },
       "email": "srodenhurstw@usatoday.com",
       "active": false
     },
@@ -991,10 +1084,12 @@
       "id": 34,
       "firstName": "Brewster",
       "lastName": "Peealess",
-      "zip": 23676,
-      "country": "Mexico",
-      "city": "Independencia",
-      "street": "Arkansas",
+      "address": {
+        "zip": 23676,
+        "country": "Mexico",
+        "city": "Independencia",
+        "street": "Arkansas"
+      },
       "email": "bpeealessx@myspace.com",
       "active": false
     },
@@ -1002,10 +1097,12 @@
       "id": 35,
       "firstName": "Garold",
       "lastName": "Woodall",
-      "zip": 29884,
-      "country": "Indonesia",
-      "city": "Anto",
-      "street": "Helena",
+      "address": {
+        "zip": 29884,
+        "country": "Indonesia",
+        "city": "Anto",
+        "street": "Helena"
+      },
       "email": "gwoodally@latimes.com",
       "active": false
     },
@@ -1013,10 +1110,12 @@
       "id": 36,
       "firstName": "Floria",
       "lastName": "Dahill",
-      "zip": 29305,
-      "country": "China",
-      "city": "Xianghuaqiao",
-      "street": "Pleasure",
+      "address": {
+        "zip": 29305,
+        "country": "China",
+        "city": "Xianghuaqiao",
+        "street": "Pleasure"
+      },
       "email": "fdahillz@wikimedia.org",
       "active": true
     },
@@ -1024,10 +1123,12 @@
       "id": 37,
       "firstName": "Corabella",
       "lastName": "Ivakhno",
-      "zip": 12093,
-      "country": "Sweden",
-      "city": "Boliden",
-      "street": "6th",
+      "address": {
+        "zip": 12093,
+        "country": "Sweden",
+        "city": "Boliden",
+        "street": "6th"
+      },
       "email": "civakhno10@ucla.edu",
       "active": true
     },
@@ -1035,10 +1136,12 @@
       "id": 38,
       "firstName": "Ekaterina",
       "lastName": "Fairebrother",
-      "zip": 23670,
-      "country": "France",
-      "city": "Noyal-sur-Vilaine",
-      "street": "Crest Line",
+      "address": {
+        "zip": 23670,
+        "country": "France",
+        "city": "Noyal-sur-Vilaine",
+        "street": "Crest Line"
+      },
       "email": "efairebrother11@jimdo.com",
       "active": false
     },
@@ -1046,10 +1149,12 @@
       "id": 39,
       "firstName": "Fredi",
       "lastName": "Riddeough",
-      "zip": 8663,
-      "country": "Brazil",
-      "city": "Colatina",
-      "street": "Bellgrove",
+      "address": {
+        "zip": 8663,
+        "country": "Brazil",
+        "city": "Colatina",
+        "street": "Bellgrove"
+      },
       "email": "friddeough12@dell.com",
       "active": true
     },
@@ -1057,10 +1162,12 @@
       "id": 40,
       "firstName": "Armand",
       "lastName": "Strafen",
-      "zip": 3133,
-      "country": "China",
-      "city": "Zhoutou",
-      "street": "3rd",
+      "address": {
+        "zip": 31394,
+        "country": "China",
+        "city": "Zhoutou",
+        "street": "3rd"
+      },
       "email": "astrafen13@umich.edu",
       "active": true
     },
@@ -1068,10 +1175,12 @@
       "id": 41,
       "firstName": "Jodi",
       "lastName": "Haverty",
-      "zip": 2514,
-      "country": "Finland",
-      "city": "Piippola",
-      "street": "Mandrake",
+      "address": {
+        "zip": 2514,
+        "country": "Finland",
+        "city": "Piippola",
+        "street": "Mandrake"
+      },
       "email": "jhaverty14@loc.gov",
       "active": true
     },
@@ -1079,10 +1188,12 @@
       "id": 42,
       "firstName": "Kalinda",
       "lastName": "Trimby",
-      "zip": 10442,
-      "country": "Cuba",
-      "city": "Maisí",
-      "street": "Paget",
+      "address": {
+        "zip": 10442,
+        "country": "Cuba",
+        "city": "Maisí",
+        "street": "Paget"
+      },
       "email": "ktrimby15@forbes.com",
       "active": false
     },
@@ -1090,10 +1201,12 @@
       "id": 43,
       "firstName": "Bayard",
       "lastName": "McGiveen",
-      "zip": 10597,
-      "country": "Brazil",
-      "city": "Ananindeua",
-      "street": "Hansons",
+      "address": {
+        "zip": 10597,
+        "country": "Brazil",
+        "city": "Ananindeua",
+        "street": "Hansons"
+      },
       "email": "bmcgiveen16@miitbeian.gov.cn",
       "active": false
     },
@@ -1101,10 +1214,12 @@
       "id": 44,
       "firstName": "Jerrylee",
       "lastName": "Plinck",
-      "zip": 19625,
-      "country": "Japan",
-      "city": "Nemuro",
-      "street": "Stoughton",
+      "address": {
+        "zip": 19625,
+        "country": "Japan",
+        "city": "Nemuro",
+        "street": "Stoughton"
+      },
       "email": "jplinck17@storify.com",
       "active": false
     },
@@ -1112,10 +1227,12 @@
       "id": 45,
       "firstName": "Michelle",
       "lastName": "Paolo",
-      "zip": 21386,
-      "country": "Indonesia",
-      "city": "Narukan",
-      "street": "Melody",
+      "address": {
+        "zip": 21386,
+        "country": "Indonesia",
+        "city": "Narukan",
+        "street": "Melody"
+      },
       "email": "mpaolo18@biblegateway.com",
       "active": true
     },
@@ -1123,10 +1240,12 @@
       "id": 46,
       "firstName": "Cullin",
       "lastName": "O'Concannon",
-      "zip": 17903,
-      "country": "China",
-      "city": "Kuiyong",
-      "street": "Boyd",
+      "address": {
+        "zip": 17903,
+        "country": "China",
+        "city": "Kuiyong",
+        "street": "Boyd"
+      },
       "email": "coconcannon19@slashdot.org",
       "active": false
     },
@@ -1134,10 +1253,12 @@
       "id": 47,
       "firstName": "Juliane",
       "lastName": "Boldry",
-      "zip": 15045,
-      "country": "Indonesia",
-      "city": "Ciseureuheun",
-      "street": "Eggendart",
+      "address": {
+        "zip": 15045,
+        "country": "Indonesia",
+        "city": "Ciseureuheun",
+        "street": "Eggendart"
+      },
       "email": "jboldry1a@live.com",
       "active": false
     },
@@ -1145,10 +1266,12 @@
       "id": 48,
       "firstName": "Oby",
       "lastName": "Kay",
-      "zip": 28900,
-      "country": "Philippines",
-      "city": "Tariji",
-      "street": "6th",
+      "address": {
+        "zip": 28900,
+        "country": "Philippines",
+        "city": "Tariji",
+        "street": "6th"
+      },
       "email": "okay1b@xrea.com",
       "active": false
     },
@@ -1156,10 +1279,12 @@
       "id": 49,
       "firstName": "Aeriela",
       "lastName": "Bullers",
-      "zip": 467,
-      "country": "Sweden",
-      "city": "Karlskoga",
-      "street": "Thompson",
+      "address": {
+        "zip": 467,
+        "country": "Sweden",
+        "city": "Karlskoga",
+        "street": "Thompson"
+      },
       "email": "abullers1c@gnu.org",
       "active": false
     },
@@ -1167,10 +1292,12 @@
       "id": 50,
       "firstName": "Inessa",
       "lastName": "Bartolomeazzi",
-      "zip": 24295,
-      "country": "China",
-      "city": "Dingzhai",
-      "street": "Pennsylvania",
+      "address": {
+        "zip": 24295,
+        "country": "China",
+        "city": "Dingzhai",
+        "street": "Pennsylvania"
+      },
       "email": "ibartolomeazzi1d@bloglines.com",
       "active": false
     },
@@ -1178,10 +1305,12 @@
       "id": 51,
       "firstName": "Ernst",
       "lastName": "Inchan",
-      "zip": 21837,
-      "country": "Philippines",
-      "city": "Antipolo",
-      "street": "Linden",
+      "address": {
+        "zip": 21837,
+        "country": "Philippines",
+        "city": "Antipolo",
+        "street": "Linden"
+      },
       "email": "einchan1e@reverbnation.com",
       "active": true
     },
@@ -1189,10 +1318,12 @@
       "id": 52,
       "firstName": "Minnnie",
       "lastName": "Alaway",
-      "zip": 19178,
-      "country": "Mexico",
-      "city": "San Miguel",
-      "street": "Westport",
+      "address": {
+        "zip": 19178,
+        "country": "Mexico",
+        "city": "San Miguel",
+        "street": "Westport"
+      },
       "email": "malaway1f@pagesperso-orange.fr",
       "active": true
     },
@@ -1200,10 +1331,12 @@
       "id": 53,
       "firstName": "Samara",
       "lastName": "Swetenham",
-      "zip": 16328,
-      "country": "Guinea",
-      "city": "Pita",
-      "street": "Elmside",
+      "address": {
+        "zip": 16328,
+        "country": "Guinea",
+        "city": "Pita",
+        "street": "Elmside"
+      },
       "email": "sswetenham1g@gnu.org",
       "active": false
     },
@@ -1211,10 +1344,12 @@
       "id": 54,
       "firstName": "Glennis",
       "lastName": "Dodsworth",
-      "zip": 5902,
-      "country": "Sweden",
-      "city": "Johanneshov",
-      "street": "Raven",
+      "address": {
+        "zip": 5902,
+        "country": "Sweden",
+        "city": "Johanneshov",
+        "street": "Raven"
+      },
       "email": "gdodsworth1h@dailymotion.com",
       "active": false
     },
@@ -1222,10 +1357,12 @@
       "id": 55,
       "firstName": "Towney",
       "lastName": "Trundle",
-      "zip": 17381,
-      "country": "Indonesia",
-      "city": "Cidadap",
-      "street": "Hermina",
+      "address": {
+        "zip": 17381,
+        "country": "Indonesia",
+        "city": "Cidadap",
+        "street": "Hermina"
+      },
       "email": "ttrundle1i@homestead.com",
       "active": true
     },
@@ -1233,10 +1370,12 @@
       "id": 56,
       "firstName": "Kathryn",
       "lastName": "Kille",
-      "zip": 16495,
-      "country": "Poland",
-      "city": "Zaklików",
-      "street": "Texas",
+      "address": {
+        "zip": 16495,
+        "country": "Poland",
+        "city": "Zaklików",
+        "street": "Texas"
+      },
       "email": "kkille1j@unicef.org",
       "active": false
     },
@@ -1244,10 +1383,12 @@
       "id": 57,
       "firstName": "Garrik",
       "lastName": "Scaysbrook",
-      "zip": 10277,
-      "country": "Portugal",
-      "city": "Redondos",
-      "street": "Tony",
+      "address": {
+        "zip": 10277,
+        "country": "Portugal",
+        "city": "Redondos",
+        "street": "Tony"
+      },
       "email": "gscaysbrook1k@narod.ru",
       "active": true
     },
@@ -1255,10 +1396,12 @@
       "id": 58,
       "firstName": "Chrotoem",
       "lastName": "Caghy",
-      "zip": 23702,
-      "country": "Philippines",
-      "city": "Andop",
-      "street": "Larry",
+      "address": {
+        "zip": 23702,
+        "country": "Philippines",
+        "city": "Andop",
+        "street": "Larry"
+      },
       "email": "ccaghy1l@loc.gov",
       "active": true
     },
@@ -1266,10 +1409,12 @@
       "id": 59,
       "firstName": "Trevor",
       "lastName": "Petranek",
-      "zip": 31684,
-      "country": "Jordan",
-      "city": "‘Izrā",
-      "street": "Kipling",
+      "address": {
+        "zip": 31684,
+        "country": "Jordan",
+        "city": "‘Izrā",
+        "street": "Kipling"
+      },
       "email": "tpetranek1m@alexa.com",
       "active": false
     },
@@ -1277,10 +1422,12 @@
       "id": 60,
       "firstName": "Sidnee",
       "lastName": "Hintzer",
-      "zip": 21823,
-      "country": "China",
-      "city": "Shuangzhu",
-      "street": "Autumn Leaf",
+      "address": {
+        "zip": 21823,
+        "country": "China",
+        "city": "Shuangzhu",
+        "street": "Autumn Leaf"
+      },
       "email": "shintzer1n@odnoklassniki.ru",
       "active": true
     },
@@ -1288,10 +1435,12 @@
       "id": 61,
       "firstName": "Minta",
       "lastName": "MacCook",
-      "zip": 11950,
-      "country": "Ireland",
-      "city": "Crossmolina",
-      "street": "Maywood",
+      "address": {
+        "zip": 11950,
+        "country": "Ireland",
+        "city": "Crossmolina",
+        "street": "Maywood"
+      },
       "email": "mmaccook1o@miitbeian.gov.cn",
       "active": false
     },
@@ -1299,10 +1448,12 @@
       "id": 62,
       "firstName": "Dar",
       "lastName": "Silverson",
-      "zip": 10660,
-      "country": "Portugal",
-      "city": "Selmes",
-      "street": "Moland",
+      "address": {
+        "zip": 10660,
+        "country": "Portugal",
+        "city": "Selmes",
+        "street": "Moland"
+      },
       "email": "dsilverson1p@google.de",
       "active": true
     },
@@ -1310,10 +1461,12 @@
       "id": 63,
       "firstName": "Caril",
       "lastName": "O'Dyvoy",
-      "zip": 878,
-      "country": "Portugal",
-      "city": "Quintas",
-      "street": "Porter",
+      "address": {
+        "zip": 878,
+        "country": "Portugal",
+        "city": "Quintas",
+        "street": "Porter"
+      },
       "email": "codyvoy1q@buzzfeed.com",
       "active": true
     },
@@ -1321,10 +1474,12 @@
       "id": 64,
       "firstName": "Ingaborg",
       "lastName": "Sharkey",
-      "zip": 2014,
-      "country": "Philippines",
-      "city": "Kolumbug",
-      "street": "Hayes",
+      "address": {
+        "zip": 2014,
+        "country": "Philippines",
+        "city": "Kolumbug",
+        "street": "Hayes"
+      },
       "email": "isharkey1r@spiegel.de",
       "active": true
     },
@@ -1332,10 +1487,12 @@
       "id": 65,
       "firstName": "Giff",
       "lastName": "Schoolcroft",
-      "zip": 19631,
-      "country": "China",
-      "city": "Dongying",
-      "street": "Chinook",
+      "address": {
+        "zip": 19631,
+        "country": "China",
+        "city": "Dongying",
+        "street": "Chinook"
+      },
       "email": "gschoolcroft1s@paypal.com",
       "active": true
     },
@@ -1343,10 +1500,12 @@
       "id": 66,
       "firstName": "Lilllie",
       "lastName": "Mulkerrins",
-      "zip": 16813,
-      "country": "Russia",
-      "city": "Rybnoye",
-      "street": "Melody",
+      "address": {
+        "zip": 16813,
+        "country": "Russia",
+        "city": "Rybnoye",
+        "street": "Melody"
+      },
       "email": "lmulkerrins1t@paypal.com",
       "active": false
     },
@@ -1354,10 +1513,12 @@
       "id": 67,
       "firstName": "Mordecai",
       "lastName": "Pardoe",
-      "zip": 3616,
-      "country": "Philippines",
-      "city": "Paitan Norte",
-      "street": "Vermont",
+      "address": {
+        "zip": 3616,
+        "country": "Philippines",
+        "city": "Paitan Norte",
+        "street": "Vermont"
+      },
       "email": "mpardoe1u@oracle.com",
       "active": false
     },
@@ -1365,10 +1526,12 @@
       "id": 68,
       "firstName": "Mahalia",
       "lastName": "Pollack",
-      "zip": 20922,
-      "country": "China",
-      "city": "Wulong",
-      "street": "Hayes",
+      "address": {
+        "zip": 20922,
+        "country": "China",
+        "city": "Wulong",
+        "street": "Hayes"
+      },
       "email": "mpollack1v@ezinearticles.com",
       "active": false
     },
@@ -1376,10 +1539,12 @@
       "id": 69,
       "firstName": "Marijn",
       "lastName": "Aberdalgy",
-      "zip": 27494,
-      "country": "China",
-      "city": "Cengang",
-      "street": "Blaine",
+      "address": {
+        "zip": 27494,
+        "country": "China",
+        "city": "Cengang",
+        "street": "Blaine"
+      },
       "email": "maberdalgy1w@jimdo.com",
       "active": false
     },
@@ -1387,10 +1552,12 @@
       "id": 70,
       "firstName": "Malinda",
       "lastName": "Brody",
-      "zip": 16887,
-      "country": "Canada",
-      "city": "Macamic",
-      "street": "Straubel",
+      "address": {
+        "zip": 16887,
+        "country": "Canada",
+        "city": "Macamic",
+        "street": "Straubel"
+      },
       "email": "mbrody1x@shop-pro.jp",
       "active": true
     },
@@ -1398,10 +1565,12 @@
       "id": 71,
       "firstName": "Darya",
       "lastName": "Vlasenkov",
-      "zip": 268,
-      "country": "China",
-      "city": "Jingling",
-      "street": "International",
+      "address": {
+        "zip": 268,
+        "country": "China",
+        "city": "Jingling",
+        "street": "International"
+      },
       "email": "dvlasenkov1y@hatena.ne.jp",
       "active": true
     },
@@ -1409,10 +1578,12 @@
       "id": 72,
       "firstName": "Pearle",
       "lastName": "Stollery",
-      "zip": 28796,
-      "country": "Kazakhstan",
-      "city": "Turkestan",
-      "street": "Tennessee",
+      "address": {
+        "zip": 28796,
+        "country": "Kazakhstan",
+        "city": "Turkestan",
+        "street": "Tennessee"
+      },
       "email": "pstollery1z@yahoo.co.jp",
       "active": false
     },
@@ -1420,10 +1591,12 @@
       "id": 73,
       "firstName": "Lutero",
       "lastName": "De Blasiis",
-      "zip": 12678,
-      "country": "Japan",
-      "city": "Uozu",
-      "street": "Loeprich",
+      "address": {
+        "zip": 12678,
+        "country": "Japan",
+        "city": "Uozu",
+        "street": "Loeprich"
+      },
       "email": "ldeblasiis20@indiegogo.com",
       "active": false
     },
@@ -1431,10 +1604,12 @@
       "id": 74,
       "firstName": "Ericka",
       "lastName": "McIvor",
-      "zip": 8855,
-      "country": "Iraq",
-      "city": "Baghdad",
-      "street": "Continental",
+      "address": {
+        "zip": 8855,
+        "country": "Iraq",
+        "city": "Baghdad",
+        "street": "Continental"
+      },
       "email": "emcivor21@freewebs.com",
       "active": false
     },
@@ -1442,10 +1617,12 @@
       "id": 75,
       "firstName": "Deborah",
       "lastName": "Draijer",
-      "zip": 28042,
-      "country": "Portugal",
-      "city": "Arzila",
-      "street": "Lawn",
+      "address": {
+        "zip": 28042,
+        "country": "Portugal",
+        "city": "Arzila",
+        "street": "Lawn"
+      },
       "email": "ddraijer22@barnesandnoble.com",
       "active": true
     },
@@ -1453,10 +1630,12 @@
       "id": 76,
       "firstName": "Henri",
       "lastName": "Smetoun",
-      "zip": 14222,
-      "country": "Greece",
-      "city": "Néa Ankhíalos",
-      "street": "Barby",
+      "address": {
+        "zip": 14222,
+        "country": "Greece",
+        "city": "Néa Ankhíalos",
+        "street": "Barby"
+      },
       "email": "hsmetoun23@ezinearticles.com",
       "active": false
     },
@@ -1464,10 +1643,12 @@
       "id": 77,
       "firstName": "Gail",
       "lastName": "Northley",
-      "zip": 8038,
-      "country": "China",
-      "city": "Yukou",
-      "street": "Summerview",
+      "address": {
+        "zip": 8038,
+        "country": "China",
+        "city": "Yukou",
+        "street": "Summerview"
+      },
       "email": "gnorthley24@domainmarket.com",
       "active": true
     },
@@ -1475,10 +1656,12 @@
       "id": 78,
       "firstName": "Ethe",
       "lastName": "Holdey",
-      "zip": 30458,
-      "country": "China",
-      "city": "Renhe",
-      "street": "Mallory",
+      "address": {
+        "zip": 30458,
+        "country": "China",
+        "city": "Renhe",
+        "street": "Mallory"
+      },
       "email": "eholdey25@hibu.com",
       "active": false
     },
@@ -1486,10 +1669,12 @@
       "id": 79,
       "firstName": "Berti",
       "lastName": "Eastwell",
-      "zip": 17770,
-      "country": "Philippines",
-      "city": "Tubo",
-      "street": "Manley",
+      "address": {
+        "zip": 17770,
+        "country": "Philippines",
+        "city": "Tubo",
+        "street": "Manley"
+      },
       "email": "beastwell26@edublogs.org",
       "active": false
     },
@@ -1497,10 +1682,12 @@
       "id": 80,
       "firstName": "Shelby",
       "lastName": "Mar",
-      "zip": 4325,
-      "country": "Israel",
-      "city": "Dimona",
-      "street": "Atwood",
+      "address": {
+        "zip": 4325,
+        "country": "Israel",
+        "city": "Dimona",
+        "street": "Atwood"
+      },
       "email": "smar27@surveymonkey.com",
       "active": false
     },
@@ -1508,10 +1695,12 @@
       "id": 81,
       "firstName": "Michaelina",
       "lastName": "Alvarado",
-      "zip": 10743,
-      "country": "Yemen",
-      "city": "Aḑ Ḑil‘",
-      "street": "Surrey",
+      "address": {
+        "zip": 10743,
+        "country": "Yemen",
+        "city": "Aḑ Ḑil‘",
+        "street": "Surrey"
+      },
       "email": "malvarado28@arizona.edu",
       "active": true
     },
@@ -1519,10 +1708,12 @@
       "id": 82,
       "firstName": "Pacorro",
       "lastName": "Cianni",
-      "zip": 17491,
-      "country": "Finland",
-      "city": "Loimaan Kunta",
-      "street": "Stang",
+      "address": {
+        "zip": 17491,
+        "country": "Finland",
+        "city": "Loimaan Kunta",
+        "street": "Stang"
+      },
       "email": "pcianni29@weibo.com",
       "active": false
     },
@@ -1530,10 +1721,12 @@
       "id": 83,
       "firstName": "Kitty",
       "lastName": "Skyme",
-      "zip": 12561,
-      "country": "Poland",
-      "city": "Kaniów",
-      "street": "Loomis",
+      "address": {
+        "zip": 12561,
+        "country": "Poland",
+        "city": "Kaniów",
+        "street": "Loomis"
+      },
       "email": "kskyme2a@tmall.com",
       "active": false
     },
@@ -1541,10 +1734,12 @@
       "id": 84,
       "firstName": "Vite",
       "lastName": "Blown",
-      "zip": 9716,
-      "country": "Philippines",
-      "city": "Santo Domingo",
-      "street": "Norway Maple",
+      "address": {
+        "zip": 9716,
+        "country": "Philippines",
+        "city": "Santo Domingo",
+        "street": "Norway Maple"
+      },
       "email": "vblown2b@webnode.com",
       "active": false
     },
@@ -1552,10 +1747,12 @@
       "id": 85,
       "firstName": "Hansiain",
       "lastName": "Szymanek",
-      "zip": 21578,
-      "country": "Colombia",
-      "city": "Malambo",
-      "street": "Alpine",
+      "address": {
+        "zip": 21578,
+        "country": "Colombia",
+        "city": "Malambo",
+        "street": "Alpine"
+      },
       "email": "hszymanek2c@linkedin.com",
       "active": true
     },
@@ -1563,10 +1760,12 @@
       "id": 86,
       "firstName": "Fayina",
       "lastName": "Galle",
-      "zip": 16658,
-      "country": "Brazil",
-      "city": "Estância",
-      "street": "Hooker",
+      "address": {
+        "zip": 16658,
+        "country": "Brazil",
+        "city": "Estância",
+        "street": "Hooker"
+      },
       "email": "fgalle2d@cnbc.com",
       "active": true
     },
@@ -1574,10 +1773,12 @@
       "id": 87,
       "firstName": "Myca",
       "lastName": "Orknay",
-      "zip": 5151,
-      "country": "Indonesia",
-      "city": "Mojo",
-      "street": "Macpherson",
+      "address": {
+        "zip": 5151,
+        "country": "Indonesia",
+        "city": "Mojo",
+        "street": "Macpherson"
+      },
       "email": "morknay2e@eepurl.com",
       "active": false
     },
@@ -1585,10 +1786,12 @@
       "id": 88,
       "firstName": "Gabriela",
       "lastName": "Tissiman",
-      "zip": 11773,
-      "country": "China",
-      "city": "Dongda",
-      "street": "Magdeline",
+      "address": {
+        "zip": 11773,
+        "country": "China",
+        "city": "Dongda",
+        "street": "Magdeline"
+      },
       "email": "gtissiman2f@hp.com",
       "active": true
     },
@@ -1596,10 +1799,12 @@
       "id": 89,
       "firstName": "Lizzy",
       "lastName": "Aindriu",
-      "zip": 9897,
-      "country": "Togo",
-      "city": "Bassar",
-      "street": "Lunder",
+      "address": {
+        "zip": 9897,
+        "country": "Togo",
+        "city": "Bassar",
+        "street": "Lunder"
+      },
       "email": "laindriu2g@apache.org",
       "active": false
     },
@@ -1607,10 +1812,12 @@
       "id": 90,
       "firstName": "Madelene",
       "lastName": "Townend",
-      "zip": 12306,
-      "country": "Japan",
-      "city": "Takatsuki",
-      "street": "Dottie",
+      "address": {
+        "zip": 12306,
+        "country": "Japan",
+        "city": "Takatsuki",
+        "street": "Dottie"
+      },
       "email": "mtownend2h@shinystat.com",
       "active": true
     },
@@ -1618,10 +1825,12 @@
       "id": 91,
       "firstName": "Josiah",
       "lastName": "Stickley",
-      "zip": 12834,
-      "country": "Brazil",
-      "city": "Capanema",
-      "street": "Monument",
+      "address": {
+        "zip": 12834,
+        "country": "Brazil",
+        "city": "Capanema",
+        "street": "Monument"
+      },
       "email": "jstickley2i@woothemes.com",
       "active": false
     },
@@ -1629,10 +1838,12 @@
       "id": 92,
       "firstName": "Eleen",
       "lastName": "Farryn",
-      "zip": 20187,
-      "country": "China",
-      "city": "Shuicha",
-      "street": "Myrtle",
+      "address": {
+        "zip": 20187,
+        "country": "China",
+        "city": "Shuicha",
+        "street": "Myrtle"
+      },
       "email": "efarryn2j@dailymail.co.uk",
       "active": false
     },
@@ -1640,10 +1851,12 @@
       "id": 93,
       "firstName": "Clare",
       "lastName": "Deboo",
-      "zip": 10279,
-      "country": "Brazil",
-      "city": "Pitangueiras",
-      "street": "Waubesa",
+      "address": {
+        "zip": 10279,
+        "country": "Brazil",
+        "city": "Pitangueiras",
+        "street": "Waubesa"
+      },
       "email": "cdeboo2k@godaddy.com",
       "active": false
     },
@@ -1651,10 +1864,12 @@
       "id": 94,
       "firstName": "Holli",
       "lastName": "Conradie",
-      "zip": 17912,
-      "country": "China",
-      "city": "Suicheng",
-      "street": "Coleman",
+      "address": {
+        "zip": 17912,
+        "country": "China",
+        "city": "Suicheng",
+        "street": "Coleman"
+      },
       "email": "hconradie2l@loc.gov",
       "active": true
     },
@@ -1662,10 +1877,12 @@
       "id": 95,
       "firstName": "Lorens",
       "lastName": "Lettson",
-      "zip": 17819,
-      "country": "Netherlands",
-      "city": "Hoogeveen",
-      "street": "North",
+      "address": {
+        "zip": 17819,
+        "country": "Netherlands",
+        "city": "Hoogeveen",
+        "street": "North"
+      },
       "email": "llettson2m@bloglovin.com",
       "active": false
     },
@@ -1673,10 +1890,12 @@
       "id": 96,
       "firstName": "Barbey",
       "lastName": "Kittman",
-      "zip": 8954,
-      "country": "Sweden",
-      "city": "Ellös",
-      "street": "Hermina",
+      "address": {
+        "zip": 8954,
+        "country": "Sweden",
+        "city": "Ellös",
+        "street": "Hermina"
+      },
       "email": "bkittman2n@senate.gov",
       "active": true
     },
@@ -1684,10 +1903,12 @@
       "id": 97,
       "firstName": "Rowan",
       "lastName": "Leblanc",
-      "zip": 4849,
-      "country": "Indonesia",
-      "city": "Waiwejak",
-      "street": "Anderson",
+      "address": {
+        "zip": 4849,
+        "country": "Indonesia",
+        "city": "Waiwejak",
+        "street": "Anderson"
+      },
       "email": "rleblanc2o@independent.co.uk",
       "active": false
     },
@@ -1695,10 +1916,12 @@
       "id": 98,
       "firstName": "Nelly",
       "lastName": "Berthelet",
-      "zip": 27460,
-      "country": "China",
-      "city": "Xiaozhi",
-      "street": "Namekagon",
+      "address": {
+        "zip": 27460,
+        "country": "China",
+        "city": "Xiaozhi",
+        "street": "Namekagon"
+      },
       "email": "nberthelet2p@geocities.jp",
       "active": true
     },
@@ -1706,10 +1929,12 @@
       "id": 99,
       "firstName": "Venus",
       "lastName": "Hylden",
-      "zip": 16987,
-      "country": "China",
-      "city": "Xiaolukou",
-      "street": "5th",
+      "address": {
+        "zip": 16987,
+        "country": "China",
+        "city": "Xiaolukou",
+        "street": "5th"
+      },
       "email": "vhylden2q@ed.gov",
       "active": true
     },
@@ -1717,10 +1942,12 @@
       "id": 100,
       "firstName": "Octavia",
       "lastName": "Bourley",
-      "zip": 23831,
-      "country": "China",
-      "city": "Jiangkou",
-      "street": "Northwestern",
+      "address": {
+        "zip": 23831,
+        "country": "China",
+        "city": "Jiangkou",
+        "street": "Northwestern"
+      },
       "email": "obourley2r@senate.gov",
       "active": false
     }
