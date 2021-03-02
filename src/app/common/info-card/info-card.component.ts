@@ -5,7 +5,7 @@ export interface InfoCard {
   icon: string;
   cardClass: string;
   title: string;
-  content: number;
+  content: string;
   footer: string;
 }
 
@@ -19,7 +19,7 @@ export class InfoCardComponent implements OnInit {
   @Input() icon: string='';
   @Input() cardClass: string='card-header-warning';
   @Input() title: string='title';
-  @Input() content: number = 0;
+  @Input() content: string = '';
   @Input() footer: string='';
 
 
