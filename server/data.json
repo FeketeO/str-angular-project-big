@@ -454,6 +454,13 @@
       "status": "shipped"
     },
     {
+      "id": 6,
+      "customerId": 3,
+      "productId": 5,
+      "amount": 1888007,
+      "status": "shipped"
+    },
+    {
       "id": 7,
       "customerId": 15,
       "productId": 15,
@@ -473,7 +480,7 @@
       "productId": 15,
       "amount": 1700000,
       "status": "shipped"
-    },    
+    },
     {
       "id": 10,
       "customerId": 15,
@@ -508,6 +515,13 @@
       "productId": 17,
       "amount": 8,
       "status": "new"
+    },
+    {
+      "id": 25,
+      "customerId": 13,
+      "productId": 10,
+      "amount": 12,
+      "status": "shipped"
     }
   ],
   "bills": [

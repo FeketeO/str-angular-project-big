@@ -3,7 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Order } from 'src/app/model/order';
 import { OrderService } from 'src/app/service/order.service';
-import { ToastrService } from 'ngx-toastr';
+import { MytoastrService } from 'src/app/service/mytoastr.service';
 
 @Component({
   selector: 'app-order-list',
@@ -25,15 +25,14 @@ export class OrderListComponent implements OnInit {
   constructor(
     private orderService: OrderService,
     private router: Router,
-    private toastr: ToastrService,
+    private mytoastr: MytoastrService,
   ) { }
 
   ngOnInit(): void {
     this.orderService.getAll();
     this.sum();
     this.pc();
-    this.showSuccess();
-    //this.showError();
+    this.mytoastr.showSuccess();    
   }
 
   sum(): void {
@@ -42,7 +41,7 @@ export class OrderListComponent implements OnInit {
         .map(item => item.amount)
         .reduce((x, y) => parseInt('' + x) + parseInt('' + y));
     },
-    error=>this.showError())
+    error=>this.mytoastr.showError())
   }
 
   pc(): void {
@@ -51,7 +50,7 @@ export class OrderListComponent implements OnInit {
         .map(item => item.id)
         .length;
     },
-    error=>this.showError())
+    error=>this.mytoastr.showError())
   } 
 
   onDelete(order: Order): void {
@@ -69,17 +68,12 @@ export class OrderListComponent implements OnInit {
   onChangePhrase(event: any): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
-
   showSuccess(): void {
-    this.toastr.success("Action succeeded!", 'Success', {
-      timeOut: 3000,
-    });
+    this.mytoastr.showSuccess();
   }
-
+  
   showError(): void {
-    this.toastr.error('Something is wrong', 'Error', {
-      timeOut: 3000,
-    });
+    this.mytoastr.showError();
   }
 }
 
