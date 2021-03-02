@@ -3,7 +3,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Order } from 'src/app/model/order';
 import { OrderService } from 'src/app/service/order.service';
-import { ToastrService } from 'ngx-toastr';
+import { ToasterService } from 'src/app/service/toaster.service';
+//import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-order-list',
@@ -20,17 +21,19 @@ export class OrderListComponent implements OnInit {
   irany: boolean = false;
   summa: any;
   darab: any;
-  alertSuccess: boolean = false;
+
   constructor(
     private orderService: OrderService,
     private router: Router,
-    private toastr: ToastrService,
+    //private toastr: ToastrService,
+    private toaster: ToasterService,
   ) { }
 
   ngOnInit(): void {
     this.orderService.getAll();
     this.sum();
-    this.db();    
+    this.db();
+    this.toaster.showSuccess();
   }
 
   sum(): void {
@@ -64,6 +67,9 @@ export class OrderListComponent implements OnInit {
   }
 
   showSuccess(): void {
+    this.toaster.showSuccess();
+  }
+  /* showSuccess(): void {
     this.toastr.success("Action succeeded!", 'Toastr fun!', {
       timeOut: 3000,
     });
@@ -73,5 +79,5 @@ export class OrderListComponent implements OnInit {
     this.toastr.error('Something is wrong', 'Error', {
       timeOut: 3000,
     });
-  }
+  } */
 }
