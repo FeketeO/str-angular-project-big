@@ -65,7 +65,8 @@
                                                 <button [routerLink]="[product.id]" class="btn btn-info">
                                                     <i class="fa fa-pencil"></i>
                                                 </button>
-                                                <button (click)="onRemove(product)" class="btn btn-danger">
+                                                <button (click)="onRemove(product)" class="btn btn-danger"
+                                                    (click)="onShow()">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </div>

@@ -4,6 +4,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { groupBy, map, tap, switchMap } from 'rxjs/operators';
 import { Product } from 'src/app/model/product';
 import { ProductService } from '../../service/product.service';
+import { ToastrService } from 'ngx-toastr';
+import { MytoastrService } from '../../service/mytoastr.service';
 
 @Component({
   selector: 'app-product-list',
@@ -43,7 +45,9 @@ export class ProductListComponent implements OnInit {
   }
 
 
-
+onShow():void{
+  this.mytoaster.showSuccess()
+}
 
   
  onget():void{
@@ -53,6 +57,8 @@ export class ProductListComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private router:Router,
+    private toaster: ToastrService,
+    private mytoaster: MytoastrService,
   ) { }
 
 
@@ -83,6 +89,7 @@ phrase:string='';
 onChangePhrase(event:any): void{
     this.phrase = (event.target as HTMLInputElement).value;
     this.sum();
+  
     
 
 }
