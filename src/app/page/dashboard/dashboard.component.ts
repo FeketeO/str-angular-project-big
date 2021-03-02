@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
     },
     {
       title: 'Products',
-      content: '52',
+      content: '50',
       cardClass: 'card-header-success',
       footer: 'Numbers os products',
       icon: 'store',
