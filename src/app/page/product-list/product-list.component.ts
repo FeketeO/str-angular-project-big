@@ -4,6 +4,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { groupBy, map, tap, switchMap } from 'rxjs/operators';
 import { Product } from 'src/app/model/product';
 import { ProductService } from '../../service/product.service';
+import { ToastrService } from 'ngx-toastr';
+import { MytoastrService } from '../../service/mytoastr.service';
 
 @Component({
   selector: 'app-product-list',
@@ -28,11 +30,6 @@ export class ProductListComponent implements OnInit {
    
   summa2:number=0;
 
-  // productList2= this.productService.list2$.subscribe(data =>{
-  //     this.summa2 = data
-  //     .map(item=>item.price)
-  //     .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
-  //   })
   
    sum(): void {
     this.productService.list2$.subscribe(data => {
@@ -43,7 +40,9 @@ export class ProductListComponent implements OnInit {
   }
 
 
-
+onShow():void{
+  this.mytoaster.showSuccess()
+}
 
   
  onget():void{
@@ -53,6 +52,8 @@ export class ProductListComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private router:Router,
+    private toaster: ToastrService,
+    private mytoaster: MytoastrService,
   ) { }
 
 
@@ -64,7 +65,7 @@ export class ProductListComponent implements OnInit {
      this.productService.getAll();
      this.productService.getAllsum();
      this.sum();
-    //  this.db();
+    
   }
 
     onRemove(product:Product):void {
@@ -83,36 +84,7 @@ phrase:string='';
 onChangePhrase(event:any): void{
     this.phrase = (event.target as HTMLInputElement).value;
     this.sum();
-    
-
-}
-//  summa:number=0;
-//   darab:any;
-
-  //   sum(): void {
-  //   this.productList2.subscribe(data =>{
-  //     this.summa = data
-  //     .map(item=>item.price)
-  //     .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
-  //   })
-  // }
-
-  //   sum(): void {
-  //   this.productService.getAllsum().subscribe(data =>{
-  //     this.summa = data
-  //     .map(item=>item.price)
-  //     .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
-  //   })
-  // }
-
-  // db(): void {
-  //   this.productList2.subscribe(data =>{
-  //     this.darab = data
-  //     .map(item=>item.id)
-  //     .length;
-  //   })
-  // }
-
-
+  
+  }
 
 }
