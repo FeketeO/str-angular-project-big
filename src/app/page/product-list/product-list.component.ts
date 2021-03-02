@@ -30,11 +30,6 @@ export class ProductListComponent implements OnInit {
    
   summa2:number=0;
 
-  // productList2= this.productService.list2$.subscribe(data =>{
-  //     this.summa2 = data
-  //     .map(item=>item.price)
-  //     .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
-  //   })
   
    sum(): void {
     this.productService.list2$.subscribe(data => {
@@ -70,7 +65,7 @@ onShow():void{
      this.productService.getAll();
      this.productService.getAllsum();
      this.sum();
-    //  this.db();
+    
   }
 
     onRemove(product:Product):void {
@@ -90,36 +85,6 @@ onChangePhrase(event:any): void{
     this.phrase = (event.target as HTMLInputElement).value;
     this.sum();
   
-    
-
-}
-//  summa:number=0;
-//   darab:any;
-
-  //   sum(): void {
-  //   this.productList2.subscribe(data =>{
-  //     this.summa = data
-  //     .map(item=>item.price)
-  //     .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
-  //   })
-  // }
-
-  //   sum(): void {
-  //   this.productService.getAllsum().subscribe(data =>{
-  //     this.summa = data
-  //     .map(item=>item.price)
-  //     .reduce((x,y)=>parseInt(''+x)+parseInt(''+y));
-  //   })
-  // }
-
-  // db(): void {
-  //   this.productList2.subscribe(data =>{
-  //     this.darab = data
-  //     .map(item=>item.id)
-  //     .length;
-  //   })
-  // }
-
-
+  }
 
 }
