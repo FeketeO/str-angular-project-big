@@ -43,6 +43,9 @@ updating:boolean=false;
       this.productService.update(product)
     }
     this.router.navigate(['product'])
+    this.productService.getAll()
+    this.productService.getAllsum()
+
     
   }
 
