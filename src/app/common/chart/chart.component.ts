@@ -29,7 +29,8 @@ export class ChartComponent implements OnInit {
   public barChartPlugins = [];
   public chartColors: Color[] = [
     {
-      backgroundColor: 'rgba(0,0,255,0.4)',
+      backgroundColor: 'rgba(255,255,255,.5)',
+
     },
   ];
 
