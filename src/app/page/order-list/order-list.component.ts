@@ -32,7 +32,7 @@ export class OrderListComponent implements OnInit {
     this.orderService.getAll();
     this.sum();
     this.pc();
-    this.mytoastr.showSuccess();    
+      
   }
 
   sum(): void {
@@ -67,6 +67,8 @@ export class OrderListComponent implements OnInit {
 
   onChangePhrase(event: any): void {
     this.phrase = (event.target as HTMLInputElement).value;
+    this.sum();
+    this.pc();
   }
   showSuccess(): void {
     this.mytoastr.showSuccess();
