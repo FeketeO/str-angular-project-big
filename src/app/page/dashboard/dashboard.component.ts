@@ -8,6 +8,8 @@ import { ProductService } from 'src/app/service/product.service';
 import { OrderService } from 'src/app/service/order.service';
 import { CustomerService } from 'src/app/service/customer.service';
 import { BillService } from 'src/app/service/bill.service';
+import { Label } from 'ng2-charts';
+import { ChartDataSets } from 'chart.js';
 
 
 
@@ -58,7 +60,7 @@ export class DashboardComponent implements OnInit {
       id: 'dailySalesChart',
       title: 'Daily Sales',
       comment: '30 % increase in today sales.',
-      footer: 'updated 4 minutes ago',
+      footer: 'updated 5 minutes ago',
      },
     {
       cardClass: 'card-header-warning',
@@ -78,6 +80,11 @@ export class DashboardComponent implements OnInit {
   ]
 
   combinatedSubscription: Subscription = new Subscription();
+
+  orderChartLabels: Label[] = ['new', 'shipped', 'payd'];
+  orderChartData: ChartDataSets[] = [
+    { data: [0, 0, 0], label: 'Orders' },
+  ];
 
   constructor(
     private productService:  ProductService,
@@ -99,6 +106,10 @@ export class DashboardComponent implements OnInit {
         this.cards[2].content = String(data[1].length);
         this.cards[3].content = String(data[3].length);
 
+        const newOrders: number = data[1].filter( o=> o.status === 'new').length;
+        const shippedOrders: number = data[1].filter( o=> o.status === 'new').length;
+        const paidOrders: number = data[1].filter( o=> o.status === 'new').length;
+        this.orderChartData[0].data = [newOrders, shippedOrders, paidOrders];
       }
     );
     this.productService.getAll();
