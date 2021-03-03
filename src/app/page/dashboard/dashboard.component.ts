@@ -81,7 +81,7 @@ export class DashboardComponent implements OnInit {
 
   combinatedSubscription: Subscription = new Subscription();
 
-  orderChartLabels: Label[] = ['new', 'shipped', 'payd'];
+  orderChartLabels: Label[] = ['new', 'shipped', 'paid'];
   orderChartData: ChartDataSets[] = [
     { data: [0, 0, 0], label: 'Orders' },
   ];
@@ -107,8 +107,8 @@ export class DashboardComponent implements OnInit {
         this.cards[3].content = String(data[3].length);
 
         const newOrders: number = data[1].filter( o=> o.status === 'new').length;
-        const shippedOrders: number = data[1].filter( o=> o.status === 'new').length;
-        const paidOrders: number = data[1].filter( o=> o.status === 'new').length;
+        const shippedOrders: number = data[1].filter( o=> o.status === 'shipped').length;
+        const paidOrders: number = data[1].filter( o=> o.status === 'paid').length;
         this.orderChartData[0].data = [newOrders, shippedOrders, paidOrders];
       }
     );
