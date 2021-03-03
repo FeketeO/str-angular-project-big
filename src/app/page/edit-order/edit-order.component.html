@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                             <button [disabled]="orderForm.invalid || updating" type="submit"
-                                class="btn btn-primary btn-block btn-lg">
+                                class="btn btn-primary btn-block btn-lg" (click)=showSuccess()>
                                 <i *ngIf="!updating" class="fa fa-save"></i>
                                 <i *ngIf="updating" class="fa fa-refresh"></i>
                             </button>
