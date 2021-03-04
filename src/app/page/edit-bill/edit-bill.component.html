@@ -9,7 +9,7 @@
                         <!-- <div class="form-group">
                             <label for="id">id</label>
                             <input id="id" name="id" [(ngModel)]="bill.id" type="number" class="form-control"
-                                pattern="\d{1,10}" required>
+                                pattern="[1-9]\d{0,9}" required>
                             <div [hidden]="billForm.controls.id?.valid" class="error-message">
                                 Az id minimum 1 és maximum 10 számjegyből állhat!
                             </div>
@@ -17,7 +17,7 @@
                         <div class="form-group">
                             <label for="orderID">OrderID</label>
                             <input id="orderID" name="orderID" [(ngModel)]="bill.orderID" type="number"
-                                class="form-control" pattern="\d{1,10}" required>
+                                class="form-control" pattern="[1-9]\d{0,9}" required>
                             <div [hidden]="billForm.controls.orderID?.valid" class="error-message">
                                 Az orderID minimum 1 és maximum 10 számjegyből állhat!
                             </div>
@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label for="amount">Amount</label>
                             <input id="amount" name="amount" [(ngModel)]="bill.amount" type="number"
-                                class="form-control" pattern="\d{1,10}" required>
+                                class="form-control" pattern="[1-9]\d{0,9}" required>
                             <div [hidden]="billForm.controls.amount?.valid" class="error-message">
                                 Az összeg minimum 1 és maximum 10 számjegyből állhat!
                             </div>
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <button [disabled]="billForm.invalid || updating" type="submit"
-                            class="btn btn-danger btn-block btn-lg">
+                            class="btn btn-danger btn-block btn-lg" (click)=showSuccess()>
                             <i *ngIf="!updating" class="fa fa-save"></i>
                             <i *ngIf="updating" class="fa fa-refresh"></i>
                         </button>
