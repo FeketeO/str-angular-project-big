@@ -28,8 +28,8 @@
                 </div>
                 <div class="card">
                     <div class="card-header card-header-info">
-                        <h4 class="card-title ">Costumer Table</h4>
-                        <p class="card-category"> All costumer are listed below</p>
+                        <h4 class="card-title ">Customer Table</h4>
+                        <p class="card-category"> All customer are listed below</p>
                     </div>
                     <div class="card-body text-center">
                         <div class="table-responsive">
@@ -46,9 +46,9 @@
                                         <th (click)="onColumnSelect('email')">Email</th>
                                         <th (click)="onColumnSelect('active')">Active</th>
                                         <th>Edit</th>
-                                        <th><i *ngIf="columnKey === 'id' && irany === 1" class="fa fa-arrow-up"></i>
-                                            <i *ngIf="columnKey === 'id' && irany === -1" class="fa fa-arrow-down"></i>
-                                        </th>
+                                        <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
+                                          <i *ngIf="irany" class="fa fa-arrow-down"></i>
+                                      </th>>
                                     </tr>
                                 </thead>
                                 <tbody>
