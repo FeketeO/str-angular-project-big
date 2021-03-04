@@ -5,6 +5,8 @@ import { NgForm } from '@angular/forms';
 import { Product } from '../../model/product';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { ToastrService } from 'ngx-toastr';
+import { MytoastrService } from '../../service/mytoastr.service';
 
 @Component({
   selector: 'app-edit-product',
@@ -23,6 +25,8 @@ product$: Observable<Product> = this.activatedRoute.params.pipe(
        private activatedRoute: ActivatedRoute,
     private productService: ProductService,
     private router: Router,
+    private toaster: ToastrService,
+    private mytoaster:MytoastrService,
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +43,14 @@ updating:boolean=false;
       this.productService.update(product)
     }
     this.router.navigate(['product'])
+    this.productService.getAll()
+    this.productService.getAllsum()
+
     
   }
+
+  onShow():void{
+    this.mytoaster.showSuccess()
+  }
+
 }

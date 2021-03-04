@@ -6,6 +6,8 @@ import { Order } from '../../model/order';
 import { OrderService } from 'src/app/service/order.service';
 import { NgForm } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { MytoastrService } from 'src/app/service/mytoastr.service';
+
 
 @Component({
   selector: 'app-edit-order',
@@ -23,6 +25,7 @@ export class EditOrderComponent implements OnInit {
     private orderService: OrderService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    private mytoastr: MytoastrService,
   ) { }
 
   ngOnInit(): void {
@@ -38,6 +41,14 @@ export class EditOrderComponent implements OnInit {
       this.orderService.update(order);
     }
     this.router.navigate(['order'])
+  }
+
+  showSuccess(): void {
+    this.mytoastr.showSuccess();
+  }
+  
+  showError(): void {
+    this.mytoastr.showError();
   }
 
 }

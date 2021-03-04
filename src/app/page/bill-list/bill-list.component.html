@@ -4,7 +4,7 @@
         <app-navbar></app-navbar>
         <div class="content">
             <div class="container-fluid">
-                <div class="row ">
+                <div class="row">
                     <div class="col-12 col-lg-5">
                         <button class="btn btn-success btn-block" [routerLink]="[0]">
                             <i class="fa fa-edit"></i>
@@ -55,11 +55,21 @@
                                             <button [routerLink]="[bill.id]" class="btn btn-info">
                                                 <i class="fa fa-pencil"></i>
                                             </button>
-                                            <button (click)="onRemove(bill)" class="btn btn-danger">
-                                                <i class="fa fa-trash"></i>
+                                            <button (click)="onRemove(bill)" class="btn btn-danger"
+                                                (click)=showSuccess()>
+                                                <i *ngIf="!update" class="fa fa-trash"></i>
+                                                <i *ngIf="update" class="fa fa-refresh"></i>
                                             </button>
                                         </div>
                                     </td>
+                                </tr>
+                                <tr class="card-header-danger">
+                                    <td>Összesen</td>
+                                    <td>{{piece|json}} számla</td>
+                                    <td>{{summa|json}} USD</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>

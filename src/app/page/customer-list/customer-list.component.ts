@@ -12,12 +12,15 @@ import { CustomerService } from '../../service/customer.service';
 })
 export class CustomerListComponent implements OnInit {
   phrase: string = '';
-  irany: boolean = false;
+  irany:boolean=false;
+  key: number | string = '';
   columnKey: string = '';
   filterKey: string = 'firstName';
   filterKeys: string[] = (Object.keys(new Customer()).concat(Object.keys(new Address()))).filter(item => !item.includes("address")).filter(item => !item.includes("notes"));
 
   customerList: BehaviorSubject<Customer[]> = this.customerService.list$;
+
+
   constructor(
     private customerService: CustomerService,
     private router: Router,
@@ -32,12 +35,25 @@ export class CustomerListComponent implements OnInit {
       this.router.navigate(['customer'])
   }
 
-  onColumnSelect(key: string): void {
-    this.columnKey = key;
-    this.irany = !this.irany;
+  // onColumnSelect(key: string): void {
+  //   if (key === this.columnKey) {
+  //     this.irany = this.irany * -1;
+  //   }
+  //   else {
+  //     this.irany = 1;
+  //   }
+  //   this.columnKey = key;
+  // };
+
+  onColumnSelect(key:string):void{
+    this.columnKey=key;
+    this.irany=!this.irany;
   }
 
   onChangePhrase(event: any): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
+
+
+
 }

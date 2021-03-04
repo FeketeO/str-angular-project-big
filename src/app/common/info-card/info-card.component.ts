@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
 export interface InfoCard {
   icon: string;
   cardClass: string;
@@ -18,7 +19,7 @@ export class InfoCardComponent implements OnInit {
   @Input() icon: string='';
   @Input() cardClass: string='card-header-warning';
   @Input() title: string='title';
-  @Input() content: string='';
+  @Input() content: string = '';
   @Input() footer: string='';
 
 

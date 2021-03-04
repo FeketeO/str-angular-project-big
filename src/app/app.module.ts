@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ChartsModule } from 'ng2-charts'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './page/product-list/product-list.component';
@@ -18,6 +19,12 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { EditCustomerComponent } from './page/edit-customer/edit-customer.component';
 import { InfoCardComponent } from './common/info-card/info-card.component';
+import { GraphCardComponent } from './common/graph-card/graph-card.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
+import { ChartComponent } from './common/chart/chart.component';
+
 
 
 @NgModule({
@@ -36,14 +43,20 @@ import { InfoCardComponent } from './common/info-card/info-card.component';
     SidebarComponent,
     DashboardComponent,
     EditCustomerComponent,
-    InfoCardComponent
+    InfoCardComponent,
+    GraphCardComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
-  ],
+    FormsModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    ChartsModule,
+],
   providers: [],
   bootstrap: [AppComponent]
 })

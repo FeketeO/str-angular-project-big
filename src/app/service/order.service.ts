@@ -17,14 +17,13 @@ export class OrderService {
   getAll(): void {
     this.http.get<Order[]>(this.orderUrl).subscribe(
       data => this.list$.next(data)
+      // error=>this.showError()
     )
   }
 
-  /* sum(): void {
-    this.http.get<Order[]>(this.orderUrl).subscribe(
-      data => this.list$.next(data)
-    )
-  } */
+  getAllsum(): Observable<Order[]> {
+    return this.http.get<Order[]>(this.orderUrl);    
+  }  
   
   get(id: number | string): Observable<Order> {
     id = typeof id === 'string' ? parseInt(id, 10) : id;
@@ -54,4 +53,10 @@ export class OrderService {
         () => this.getAll()
       );
   }
+
+  /* showError(): void {
+    this.toastr.error('Something is wrong', 'Error', {
+      timeOut: 3000,
+    });
+  } */
 }

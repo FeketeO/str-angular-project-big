@@ -57,24 +57,24 @@
                                         <td>{{order.status}}</td>
                                         <td>
                                             <div class="btn-group">
-                                                <button [routerLink]="[order.id]" class="btn btn-info">
+                                                <button [routerLink]="[order.id]" class="btn btn-info" (click)=showSuccess()>
                                                     <i class="fa fa-pencil"></i>
                                                 </button>
-                                                <button (click)="onDelete(order)" class="btn btn-danger">
-                                                    <i class="fa fa-trash"></i>
+                                                <button (click)="onDelete(order)" class="btn btn-danger" (click)=showSuccess()>                                                    
+                                                    <i *ngIf="!update" class="fa fa-trash"></i>
+                                                    <i *ngIf="update" class="fa fa-refresh"></i>
                                                 </button>
                                             </div>
                                         </td>
                                     </tr>
-                                    <!-- <tr
-                                *ngFor="let order of orderList | async">
-                                <td>{{order.id}}</td>
-                                <td>{{order.customerId}} </td>
-                                <td>{{order.productId}}</td>
-                                <td>{{order.amount}}</td>
-                                <td>{{order.status}}</td>
-                                <td></td>
-                            </tr> -->
+                                    <tr class="card-header-primary">
+                                        <td>Összesen</td>
+                                        <td>{{piece|json}} pc</td>
+                                        <td>{{piece|json}} pc</td>
+                                        <td>{{summa|json}} $</td>
+                                        <td>{{piece|json}} pc</td>
+                                        <td></td>
+                                    </tr>
                                 </tbody>
                             </table>
 
