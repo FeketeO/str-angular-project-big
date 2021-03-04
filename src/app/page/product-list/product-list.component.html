@@ -22,7 +22,8 @@
                         <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="text" placeholder="Search"
                                 (keyup)="onChangePhrase($event)">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            <button class="btn btn-outline-success my-2 my-sm-0" (click)="onget()"
+                                type="submit">Search</button>
                         </form>
                     </div>
                 </div>
@@ -50,7 +51,7 @@
                                 </thead>
                                 <tbody>
                                     <tr
-                                        *ngFor="let product of productList | async | filter:phrase:filterKey  | sorter:columnKey:irany">
+                                        *ngFor="let product of productList | async | filter:phrase:filterKey:productfilter  | sorter:columnKey:irany">
                                         <td>{{product.id}}</td>
                                         <td>{{product.name}} </td>
                                         <td>{{product.type}}</td>
@@ -64,12 +65,39 @@
                                                 <button [routerLink]="[product.id]" class="btn btn-info">
                                                     <i class="fa fa-pencil"></i>
                                                 </button>
-                                                <button (click)="onRemove(product)" class="btn btn-danger">
+                                                <button (click)="onRemove(product)" class="btn btn-danger"
+                                                    (click)="onShow()">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                             </div>
                                         </td>
                                     </tr>
+                                    <tr class="card-header-success">
+                                        <td>Number of products:</td>
+                                        <td></td>
+                                        <td>Products filtered:</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Summa Price:</td>
+                                        <td>Number of featured</td>
+                                        <td>Number of active</td>
+                                        <td></td>
+                                        <td></td>
+
+                                    </tr>
+                                    <tr class="card-header-success">
+                                        <td>{{productCount}} db</td>
+                                        <td></td>
+                                        <td>{{productfilter.count}} db</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{{summa2}} $</td>
+                                        <td>{{featuredproduct}} db</td>
+                                        <td>{{activeproduct}} db</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>
