@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Bill } from 'src/app/model/bill';
 import { BillService } from 'src/app/service/bill.service';
+import { MytoastrService } from 'src/app/service/mytoastr.service';
 
 @Component({
   selector: 'app-edit-bill',
@@ -22,8 +23,8 @@ export class EditBillComponent implements OnInit {
   constructor(
     private billService: BillService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
-
+    private router: Router,
+    private mytoastr: MytoastrService
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +40,14 @@ export class EditBillComponent implements OnInit {
       this.billService.update(bill);
     }
     this.router.navigate(['bill'])
+  }
+
+  showSuccess(): void {
+    this.mytoastr.showSuccess();
+  }
+
+  showError(): void {
+    this.mytoastr.showError();
   }
 
 
