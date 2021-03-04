@@ -1,37 +1,37 @@
 <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-    <div class="logo"><a routerLink="/" (click)="ujratolt()" class=" simple-text logo-normal">
+    <div class="logo"><a routerLink="/" class=" simple-text logo-normal">
             6-os csapat
         </a></div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="nav-item active ">
-                <a class="nav-link" routerLink="/" (click)="ujratolt()">
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" routerLink="/">
                     <i class=" material-icons">dashboard</i>
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
                 <a class="nav-link" routerLink="/product">
                     <i class="material-icons">library_books</i>
-                    <p>Termékek</p>
+                    <p>Products</p>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
                 <a class="nav-link" routerLink="/customer">
                     <i class="material-icons">person</i>
-                    <p>Vásárlók</p>
+                    <p>Costumers</p>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
                 <a class="nav-link" routerLink="/order">
                     <i class="material-icons">library_books</i>
-                    <p>Rendelések</p>
+                    <p>Orders</p>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
                 <a class="nav-link" routerLink="/bill">
                     <i class="material-icons">shopping_cart</i>
-                    <p>Pénztár</p>
+                    <p>Bills</p>
                 </a>
             </li>
         </ul>

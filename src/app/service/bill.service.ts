@@ -21,6 +21,10 @@ export class BillService {
     )
   }
 
+  getAllsum(): Observable<Bill[]> {
+    return this.http.get<Bill[]>(this.billUrl);
+  }
+
   get(id: number | string): Observable<Bill> {
     id = typeof id === 'string' ? parseInt(id, 10) : id;
     if (id !== 0) {
@@ -28,7 +32,6 @@ export class BillService {
     }
     return of(new Bill())
   }
-
 
   create(bill: Bill): void {
     this.http.post<Bill>(

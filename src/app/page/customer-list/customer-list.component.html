@@ -28,8 +28,8 @@
                 </div>
                 <div class="card">
                     <div class="card-header card-header-info">
-                        <h4 class="card-title ">Costumer Table</h4>
-                        <p class="card-category"> All costumer are listed below</p>
+                        <h4 class="card-title ">Customer Table</h4>
+                        <p class="card-category"> All customer are listed below</p>
                     </div>
                     <div class="card-body text-center">
                         <div class="table-responsive">
@@ -39,16 +39,16 @@
                                         <th (click)="onColumnSelect('id')">ID</th>
                                         <th (click)="onColumnSelect('firstName')">Firstname</th>
                                         <th (click)="onColumnSelect('lastName')">Lastname</th>
-                                        <th (click)="onColumnSelect('address.zip')">ZIP</th>
-                                        <th (click)="onColumnSelect('address.country')">Country</th>
-                                        <th (click)="onColumnSelect('address.city')">City</th>
-                                        <th (click)="onColumnSelect('address.street')">Street</th>
+                                        <th (click)="onColumnSelect('zip')">ZIP</th>
+                                        <th (click)="onColumnSelect('country')">Country</th>
+                                        <th (click)="onColumnSelect('city')">City</th>
+                                        <th (click)="onColumnSelect('street')">Street</th>
                                         <th (click)="onColumnSelect('email')">Email</th>
                                         <th (click)="onColumnSelect('active')">Active</th>
                                         <th>Edit</th>
                                         <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
-                                            <i *ngIf="irany" class="fa fa-arrow-down"></i>
-                                        </th>
+                                          <i *ngIf="irany" class="fa fa-arrow-down"></i>
+                                      </th>>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -57,10 +57,10 @@
                                         <td>{{customer.id}}</td>
                                         <td>{{customer.firstName}}</td>
                                         <td>{{customer.lastName}}</td>
-                                        <td>{{customer.address.zip}}</td>
-                                        <td>{{customer.address.country}}</td>
-                                        <td>{{customer.address.city}}</td>
-                                        <td>{{customer.address.street}}</td>
+                                        <td>{{customer.zip}}</td>
+                                        <td>{{customer.country}}</td>
+                                        <td>{{customer.city}}</td>
+                                        <td>{{customer.street}}</td>
                                         <td>{{customer.email}}</td>
                                         <td>{{customer.active}}</td>
                                         <td>

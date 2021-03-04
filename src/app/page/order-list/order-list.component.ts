@@ -32,7 +32,7 @@ export class OrderListComponent implements OnInit {
     this.orderService.getAll();
     this.sum();
     this.pc();
-      
+
   }
 
   sum(): void {
@@ -41,7 +41,7 @@ export class OrderListComponent implements OnInit {
         .map(item => item.amount)
         .reduce((x, y) => parseInt('' + x) + parseInt('' + y));
     },
-    error=>this.mytoastr.showError())
+      error => this.mytoastr.showError())
   }
 
   pc(): void {
@@ -50,15 +50,17 @@ export class OrderListComponent implements OnInit {
         .map(item => item.id)
         .length;
     },
-    error=>this.mytoastr.showError())
-  } 
+      error => this.mytoastr.showError())
+  }
 
   onDelete(order: Order): void {
     this.update = true;
     this.orderService.remove(order),
       this.router.navigate(['order']),
       this.update = false;
-  }  
+    this.sum();
+    this.pc();
+  }
 
   onColumnSelect(key: string): void {
     this.columnKey = key;
@@ -73,7 +75,7 @@ export class OrderListComponent implements OnInit {
   showSuccess(): void {
     this.mytoastr.showSuccess();
   }
-  
+
   showError(): void {
     this.mytoastr.showError();
   }
