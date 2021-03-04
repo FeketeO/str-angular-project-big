@@ -16,6 +16,14 @@ export class ProductService {
 
  list$: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
 
+ list2$:Observable<Product[]>=this.getAllsum();
+
+ getAllsum(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiUrl);
+    
+  }
+ 
+
  getAll(): void {
     this.http.get<Product[]>(this.apiUrl).subscribe(
       data => this.list$.next(data)
