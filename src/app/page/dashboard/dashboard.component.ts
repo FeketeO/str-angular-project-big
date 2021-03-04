@@ -8,6 +8,9 @@ import { ProductService } from 'src/app/service/product.service';
 import { OrderService } from 'src/app/service/order.service';
 import { CustomerService } from 'src/app/service/customer.service';
 import { BillService } from 'src/app/service/bill.service';
+import { Label } from 'ng2-charts';
+import { ChartDataSets } from 'chart.js';
+import { DefaultNoAnimationsGlobalConfig } from 'ngx-toastr';
 
 
 
@@ -23,31 +26,31 @@ export class DashboardComponent implements OnInit {
 
   cards: InfoCard[] = [
     {
-      title: 'Customers',
-      content: '0',
-      cardClass: 'card-header-warning',
-      footer: 'Numbers of customers',
-      icon: 'account_circle',
-    },
-    {
       title: 'Products',
       content: '50',
       cardClass: 'card-header-success',
-      footer: 'Numbers os products',
+      footer: 'Numbers of active products',
       icon: 'store',
+    },
+    {
+      title: 'Customers',
+      content: '10',
+      cardClass: 'card-header-warning',
+      footer: 'Numbers of active customers',
+      icon: 'account_circle',
     },
     {
       title: 'Orders',
       content: '30',
       cardClass: 'card-header-primary',
-      footer: 'Numbers of orders',
+      footer: 'Numbers of !paid orders',
       icon: 'shopping_cart',
     },
     {
       title: 'Bill',
       content: '12',
       cardClass: 'card-header-info',
-      footer: 'Numbers of bills',
+      footer: 'Numbers of !paid bills',
       icon: 'price_check',
     },
   ]
@@ -58,7 +61,7 @@ export class DashboardComponent implements OnInit {
       id: 'dailySalesChart',
       title: 'Daily Sales',
       comment: '30 % increase in today sales.',
-      footer: 'updated 4 minutes ago',
+      footer: 'updated 5 minutes ago',
      },
     {
       cardClass: 'card-header-warning',
@@ -79,6 +82,19 @@ export class DashboardComponent implements OnInit {
 
   combinatedSubscription: Subscription = new Subscription();
 
+  orderChartLabels: Label[] = ['all', 'new', 'shipped', 'paid'];
+  orderChartData: ChartDataSets[] = [
+    { data: [0, 0, 0], label: 'Orders' },
+  ];
+  productsChartLabels: Label[] = ['all', 'featured', 'active'];
+  productsChartData: ChartDataSets[] = [
+    { data: [0, 0, 0], label: 'Products'},
+  ];
+  customersChartLabels: Label[] = ['all', 'false', 'true'];
+  customersChartData: ChartDataSets[] = [
+    { data: [0, 0, 0], label: 'Customers'},
+  ];
+
   constructor(
     private productService:  ProductService,
     private orderService: OrderService,
@@ -89,22 +105,41 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.combinatedSubscription = combineLatest([
       this.productService.list$,
-      this.orderService.list$,
       this.customerService.list$,
+      this.orderService.list$,
       this.billService.billList$,
     ]).subscribe(
       data => {
-        this.cards[0].content = String(data[2].length);
-        this.cards[1].content = String(data[0].length);
-        this.cards[2].content = String(data[1].length);
-        this.cards[3].content = String(data[3].length);
+        this.cards[0].content = String(data[0].filter(o => o.active === true).length);
+        this.cards[1].content = String(data[1].filter( o => o.active === true).length);
+        this.cards[2].content = String(data[2].filter(o => o.status !== 'paid').length);
+        this.cards[3].content = String(data[3].filter(o => o.status !== 'paid')
+        .map(item => item.amount).length);
 
+
+        const allOrders: number = data[2].length;
+        const newOrders: number = data[2].filter( o=> o.status === 'new').length;
+        const shippedOrders: number = data[2].filter( o=> o.status === 'shipped').length;
+        const paidOrders: number = data[2].filter( o=> o.status === 'paid').length;
+        this.orderChartData[0].data = [allOrders, newOrders, shippedOrders, paidOrders];
+
+        const allProducts: number = data[0].length;
+        const newProducts: number = data[0].filter(pr => pr.featured === true).length;
+        const activeProducts: number = data[0].filter(pr => pr.active === true).length;
+        this.productsChartData[0].data = [allProducts, newProducts,activeProducts];
+
+        const allCustomers: number = data[1].length;
+        const activeCustomers: number = data[1].filter(cu => cu.active === true).length;
+        const nonActiveCustomers: number = data[1].filter(cu => cu.active === false).length;
+        this.customersChartData[0].data = [allCustomers, activeCustomers, nonActiveCustomers];
       }
     );
+
     this.productService.getAll();
     this.orderService.getAll();
     this.customerService.getAll();
     this.billService.getAll();
   }
+
 
 }

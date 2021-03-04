@@ -24,15 +24,26 @@ export class ProductListComponent implements OnInit {
    //map(products:Product[]=>products.filter(products=>products)),
    tap(products=>this.productCount=products.length), 
    tap(products=>this.productfilter.count=products.length), 
-      
+
    )
-   
-   
+      
   summa2:number=0;
+featuredproduct:number=0;
+activeproduct:number=0;
+
+featuredCount():void{
+this.productService.getAllsum().subscribe(data=>
+  this.featuredproduct=data.filter(item=>item.featured).length)
+}
+activeCount():void{
+this.productService.getAllsum().subscribe(data=>
+  this.activeproduct=data.filter(item=>item.active).length)
+}
+
 
   
    sum(): void {
-    this.productService.list2$.subscribe(data => {
+    this.productService.getAllsum().subscribe(data => {
       this.summa2 = data
         .map(item => item.price)
         .reduce((x, y) => parseInt('' + x) + parseInt('' + y));
@@ -65,16 +76,22 @@ onShow():void{
      this.productService.getAll();
      this.productService.getAllsum();
      this.sum();
+     this.featuredCount();
+     this.activeCount();
     
   }
 
     onRemove(product:Product):void {
     this.productService.remove(product),
     this.sum(),
+    this.featuredCount(),
+    this.activeCount(),
     this.router.navigate(['product'])
   }
   irany:boolean=false;
+
 columnKey:string='';
+
 onColumnSelect(key:string):void{
   this.columnKey=key;
   this.irany=!this.irany;
@@ -84,6 +101,8 @@ phrase:string='';
 onChangePhrase(event:any): void{
     this.phrase = (event.target as HTMLInputElement).value;
     this.sum();
+    this.activeCount();
+    this.featuredCount();
   
   }
 

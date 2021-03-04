@@ -12,7 +12,8 @@ import { CustomerService } from '../../service/customer.service';
 })
 export class CustomerListComponent implements OnInit {
   phrase: string = '';
-  irany: boolean = false;
+  irany: number = 1;
+  key: number | string = '';
   columnKey: string = '';
   filterKey: string = 'firstName';
   filterKeys: string[] = (Object.keys(new Customer()).concat(Object.keys(new Address()))).filter(item => !item.includes("address")).filter(item => !item.includes("notes"));
@@ -33,14 +34,33 @@ export class CustomerListComponent implements OnInit {
   }
 
   onColumnSelect(key: string): void {
+    if (key === this.columnKey) {
+      this.irany = this.irany * -1;
+    }
+    else {
+      this.irany = 1;
+    }
     this.columnKey = key;
-    this.irany = !this.irany;
-  }
-
-
+  };
 
 
   onChangePhrase(event: any): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
+
+  sortby = (this.customerList.sort((a:any,b:any) => {
+    if (typeof a[this.key] === 'number' && typeof b[this.key] === 'number') {
+      return a[this.key] - b[this.key] * this.irany;
+    }
+    else {
+      return (
+        '' + a[this.key])
+        .toLowerCase()
+        .localeCompare(
+           ('' + b[this.key].toLowerCase())
+        ) * this.irany
+
+    }
+  })
+
 }
