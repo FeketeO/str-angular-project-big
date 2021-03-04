@@ -4,6 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Address } from 'src/app/model/address';
 import { Customer } from 'src/app/model/customer';
 import { CustomerService } from '../../service/customer.service';
+import { CustomersortingService } from '../../service/customersorting.service'
 
 @Component({
   selector: 'app-customer-list',
@@ -19,9 +20,15 @@ export class CustomerListComponent implements OnInit {
   filterKeys: string[] = (Object.keys(new Customer()).concat(Object.keys(new Address()))).filter(item => !item.includes("address")).filter(item => !item.includes("notes"));
 
   customerList: BehaviorSubject<Customer[]> = this.customerService.list$;
+
+  direction: string = 'asc';
+  arr: any = '';
+  props: string ='[]';
+
   constructor(
     private customerService: CustomerService,
     private router: Router,
+    private customerSortService: CustomersortingService,
 
   ) { }
 
@@ -33,34 +40,25 @@ export class CustomerListComponent implements OnInit {
       this.router.navigate(['customer'])
   }
 
+  // onColumnSelect(key: string): void {
+  //   if (key === this.columnKey) {
+  //     this.irany = this.irany * -1;
+  //   }
+  //   else {
+  //     this.irany = 1;
+  //   }
+  //   this.columnKey = key;
+  // };
+
   onColumnSelect(key: string): void {
-    if (key === this.columnKey) {
-      this.irany = this.irany * -1;
-    }
-    else {
-      this.irany = 1;
-    }
-    this.columnKey = key;
-  };
+    this.customerSortService.sortyObjectByProp(this.arr, this.direction, this.props)
+  }
 
 
   onChangePhrase(event: any): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
 
-  sortby = (this.customerList.sort((a:any,b:any) => {
-    if (typeof a[this.key] === 'number' && typeof b[this.key] === 'number') {
-      return a[this.key] - b[this.key] * this.irany;
-    }
-    else {
-      return (
-        '' + a[this.key])
-        .toLowerCase()
-        .localeCompare(
-           ('' + b[this.key].toLowerCase())
-        ) * this.irany
 
-    }
-  })
 
 }

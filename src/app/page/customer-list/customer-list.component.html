@@ -46,14 +46,14 @@
                                         <th (click)="onColumnSelect('email')">Email</th>
                                         <th (click)="onColumnSelect('active')">Active</th>
                                         <th>Edit</th>
-                                        <th><i *ngIf="columnKey === 'id' && irany === 1" class="fa fa-arrow-up"></i>
-                                            <i *ngIf="columnKey === 'id' && irany === -1" class="fa fa-arrow-down"></i>
-                                        </th>
+                                        <th><i *ngIf="!direction" class="fa fa-arrow-up"></i>
+                                          <i *ngIf="direction" class="fa fa-arrow-down"></i>
+                                      </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr
-                                        *ngFor="let customer of customerList | async | filter:phrase:filterKey | sorter:columnKey:irany">
+                                        *ngFor="let customer of customerList | async | filter:phrase:filterKey | sorter:columnKey">
                                         <td>{{customer.id}}</td>
                                         <td>{{customer.firstName}}</td>
                                         <td>{{customer.lastName}}</td>

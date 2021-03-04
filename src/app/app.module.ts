@@ -43,6 +43,7 @@ import { CommonModule } from '@angular/common';
     InfoCardComponent,
     GraphCardComponent,
 
+
   ],
   imports: [
     BrowserModule,
