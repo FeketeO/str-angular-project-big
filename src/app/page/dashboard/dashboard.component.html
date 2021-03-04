@@ -16,7 +16,7 @@
           </div>
 
         </div>
-        <div class="row">
+        <!-- <div class="row">
 
           <div *ngFor="let graph of graphs" class="col-md-4">
             <app-graph-card [cardClass]="graph.cardClass"
@@ -26,35 +26,56 @@
             [footer]="graph.footer"
             ></app-graph-card>
           </div>
-        </div>
+        </div> -->
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="card card-chart">
               <div class="card-header card-header-success">
+                <app-chart
+                [barChartLabels]="productsChartLabels"
+                [barChartData]="productsChartData"></app-chart>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Produts</h4>
+                <p class="card-category">
+                  <span class="text-success"><i class="fa fa-long-arrow-up"></i>55%</span> increase in today sales.</p>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">access_time</i> updated 4 minutes ago
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-chart">
+              <div class="card-header card-header-warning">
+                <app-chart
+                  [barChartLabels]="customersChartLabels"
+                  [barChartData]="customersChartData"></app-chart>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Customers</h4>
+                <p class="card-category">
+                  <span class="text-success"><i class="fa fa-long-arrow-up"></i>55%</span> increase in today sales.</p>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">access_time</i> updated 4 minutes ago
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-chart">
+              <div class="card-header card-header-primary">
                 <app-chart
                   [barChartLabels]="orderChartLabels"
                   [barChartData]="orderChartData"></app-chart>
               </div>
               <div class="card-body">
-                <h4 class="card-title">Daily Sales</h4>
-                <p class="card-category">
-                  <span class="text-success"><i class="fa fa-long-arrow-up"></i>55%</span> increase in today sales.</p>
-              </div>
-              <div class="card-footer">
-                <div class="stats">
-                  <i class="material-icons">access_time</i> updated 4 minutes ago
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card card-chart">
-              <div class="card-header card-header-success">
-                <app-chart></app-chart>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">Daily Sales</h4>
+                <h4 class="card-title">Orders</h4>
                 <p class="card-category">
                   <span class="text-success"><i class="fa fa-long-arrow-up"></i>55%</span> increase in today sales.</p>
               </div>
@@ -67,7 +88,8 @@
           </div>
         </div>
 
-        <div class="row">
+
+        <!-- <div class="row">
           <div class="col-lg-6 col-md-12">
             <div class="card">
               <div class="card-header card-header-tabs card-header-primary">
@@ -357,7 +379,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
