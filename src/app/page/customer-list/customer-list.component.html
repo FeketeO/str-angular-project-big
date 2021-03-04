@@ -46,8 +46,8 @@
                                         <th (click)="onColumnSelect('email')">Email</th>
                                         <th (click)="onColumnSelect('active')">Active</th>
                                         <th>Edit</th>
-                                        <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
-                                            <i *ngIf="irany" class="fa fa-arrow-down"></i>
+                                        <th><i *ngIf="columnKey === 'id' && irany === 1" class="fa fa-arrow-up"></i>
+                                            <i *ngIf="columnKey === 'id' && irany === -1" class="fa fa-arrow-down"></i>
                                         </th>
                                     </tr>
                                 </thead>
