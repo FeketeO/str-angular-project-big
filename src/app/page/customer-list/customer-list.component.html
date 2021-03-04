@@ -28,8 +28,8 @@
                 </div>
                 <div class="card">
                     <div class="card-header card-header-info">
-                        <h4 class="card-title ">Costumer Table</h4>
-                        <p class="card-category"> All costumer are listed below</p>
+                        <h4 class="card-title ">Customer Table</h4>
+                        <p class="card-category"> All customer are listed below</p>
                     </div>
                     <div class="card-body text-center">
                         <div class="table-responsive">
@@ -46,14 +46,14 @@
                                         <th (click)="onColumnSelect('email')">Email</th>
                                         <th (click)="onColumnSelect('active')">Active</th>
                                         <th>Edit</th>
-                                        <th><i *ngIf="!direction" class="fa fa-arrow-up"></i>
-                                          <i *ngIf="direction" class="fa fa-arrow-down"></i>
-                                      </th>
+                                        <th><i *ngIf="!irany" class="fa fa-arrow-up"></i>
+                                          <i *ngIf="irany" class="fa fa-arrow-down"></i>
+                                      </th>>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr
-                                        *ngFor="let customer of customerList | async | filter:phrase:filterKey | sorter:columnKey">
+                                        *ngFor="let customer of customerList | async | filter:phrase:filterKey | sorter:columnKey:irany">
                                         <td>{{customer.id}}</td>
                                         <td>{{customer.firstName}}</td>
                                         <td>{{customer.lastName}}</td>

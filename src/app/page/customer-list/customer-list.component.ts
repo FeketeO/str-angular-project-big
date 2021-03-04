@@ -4,7 +4,6 @@ import { BehaviorSubject } from 'rxjs';
 import { Address } from 'src/app/model/address';
 import { Customer } from 'src/app/model/customer';
 import { CustomerService } from '../../service/customer.service';
-import { CustomersortingService } from '../../service/customersorting.service'
 
 @Component({
   selector: 'app-customer-list',
@@ -13,7 +12,7 @@ import { CustomersortingService } from '../../service/customersorting.service'
 })
 export class CustomerListComponent implements OnInit {
   phrase: string = '';
-  irany: number = 1;
+  irany:boolean=false;
   key: number | string = '';
   columnKey: string = '';
   filterKey: string = 'firstName';
@@ -21,14 +20,10 @@ export class CustomerListComponent implements OnInit {
 
   customerList: BehaviorSubject<Customer[]> = this.customerService.list$;
 
-  direction: string = 'asc';
-  arr: any = '';
-  props: string ='[]';
 
   constructor(
     private customerService: CustomerService,
     private router: Router,
-    private customerSortService: CustomersortingService,
 
   ) { }
 
@@ -50,10 +45,10 @@ export class CustomerListComponent implements OnInit {
   //   this.columnKey = key;
   // };
 
-  onColumnSelect(key: string): void {
-    this.customerSortService.sortyObjectByProp(this.arr, this.direction, this.props)
+  onColumnSelect(key:string):void{
+    this.columnKey=key;
+    this.irany=!this.irany;
   }
-
 
   onChangePhrase(event: any): void {
     this.phrase = (event.target as HTMLInputElement).value;

@@ -26,6 +26,7 @@ import { CommonModule } from '@angular/common';
 import { ChartComponent } from './common/chart/chart.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
