@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
+import { withLatestFrom } from 'rxjs/operators';
 
 @Component({
   selector: 'app-chart',
@@ -29,7 +30,8 @@ export class ChartComponent implements OnInit {
   public barChartPlugins = [];
   public chartColors: Color[] = [
     {
-      backgroundColor: 'rgba(255,255,255,.5)',
+
+      backgroundColor: 'rgba(255,255,255,.6)',
 
     },
   ];

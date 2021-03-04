@@ -27,28 +27,28 @@ export class DashboardComponent implements OnInit {
   cards: InfoCard[] = [
     {
       title: 'Products',
-      content: '50',
+      content: 50,
       cardClass: 'card-header-success',
       footer: 'Numbers of active products',
       icon: 'store',
     },
     {
       title: 'Customers',
-      content: '0',
+      content: 10,
       cardClass: 'card-header-warning',
       footer: 'Numbers of active customers',
       icon: 'account_circle',
     },
     {
       title: 'Orders',
-      content: '30',
+      content: 30,
       cardClass: 'card-header-primary',
       footer: 'Numbers of orders',
       icon: 'shopping_cart',
     },
     {
       title: 'Bill',
-      content: '12',
+      content: 12,
       cardClass: 'card-header-info',
       footer: 'Numbers of bills',
       icon: 'price_check',
@@ -110,10 +110,12 @@ export class DashboardComponent implements OnInit {
       this.billService.billList$,
     ]).subscribe(
       data => {
-        this.cards[0].content = String(data[0].filter(o => o.active === true).length);
-        this.cards[1].content = String(data[1].filter( o => o.active === true).length);
-        this.cards[2].content = String(data[2].filter(o => o.status !== 'paid').length);
-        this.cards[3].content = String(data[3].filter(o => o.status !== 'paid').length);
+        this.cards[0].content = Number(data[0].filter(o => o.active === true).length);
+        this.cards[1].content = Number(data[1].filter( o => o.active === true).length);
+        this.cards[2].content = Number(data[2].filter(o => o.status !== 'paid').length);
+        this.cards[3].content = Number(data[3].filter(o => o.status !== 'paid')
+        .map(item => item.amount).length);
+
 
         const allOrders: number = data[2].length;
         const newOrders: number = data[2].filter( o=> o.status === 'new').length;
@@ -132,10 +134,12 @@ export class DashboardComponent implements OnInit {
         this.customersChartData[0].data = [allCustomers, activeCustomers, nonActiveCustomers];
       }
     );
+
     this.productService.getAll();
     this.orderService.getAll();
     this.customerService.getAll();
     this.billService.getAll();
   }
+
 
 }
