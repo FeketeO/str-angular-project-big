@@ -13,7 +13,7 @@ import { MytoastrService } from 'src/app/service/mytoastr.service';
 export class BillListComponent implements OnInit {
 
   billList: BehaviorSubject<Bill[]> = this.billService.billList$;
-  billListsum: Observable<Bill[]> = this.billService.getAllsum();
+  billListsum$: Observable<Bill[]> = this.billService.getAllsum();
   columnKey: string = '';
   phrase: string = '';
   filterKey: string = 'orderID';
@@ -51,8 +51,12 @@ export class BillListComponent implements OnInit {
   }
 
   onRemove(bill: Bill): void {
-    this.billService.remove(bill),
-      this.router.navigate(['bill'])
+    this.update = true;
+    this.billService.remove(bill);
+    this.sum();
+    this.pc();
+    this.router.navigate(['bill']);
+    this.update = false;
   }
 
   onColumnSelect(key: string): void {
@@ -62,6 +66,8 @@ export class BillListComponent implements OnInit {
 
   onChangePhrase(event: any): void {
     this.phrase = (event.target as HTMLInputElement).value;
+    this.sum();
+    this.pc();
   }
 
   showSuccess(): void {
