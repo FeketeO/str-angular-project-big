@@ -39,10 +39,10 @@
                                         <th (click)="onColumnSelect('id')">ID</th>
                                         <th (click)="onColumnSelect('firstName')">Firstname</th>
                                         <th (click)="onColumnSelect('lastName')">Lastname</th>
-                                        <th (click)="onColumnSelect('address.zip')">ZIP</th>
-                                        <th (click)="onColumnSelect('address.country')">Country</th>
-                                        <th (click)="onColumnSelect('address.city')">City</th>
-                                        <th (click)="onColumnSelect('address.street')">Street</th>
+                                        <th (click)="onColumnSelect('zip')">ZIP</th>
+                                        <th (click)="onColumnSelect('country')">Country</th>
+                                        <th (click)="onColumnSelect('city')">City</th>
+                                        <th (click)="onColumnSelect('street')">Street</th>
                                         <th (click)="onColumnSelect('email')">Email</th>
                                         <th (click)="onColumnSelect('active')">Active</th>
                                         <th>Edit</th>
@@ -57,10 +57,10 @@
                                         <td>{{customer.id}}</td>
                                         <td>{{customer.firstName}}</td>
                                         <td>{{customer.lastName}}</td>
-                                        <td>{{customer.address.zip}}</td>
-                                        <td>{{customer.address.country}}</td>
-                                        <td>{{customer.address.city}}</td>
-                                        <td>{{customer.address.street}}</td>
+                                        <td>{{customer.zip}}</td>
+                                        <td>{{customer.country}}</td>
+                                        <td>{{customer.city}}</td>
+                                        <td>{{customer.street}}</td>
                                         <td>{{customer.email}}</td>
                                         <td>{{customer.active}}</td>
                                         <td>
@@ -74,6 +74,33 @@
                                             </div>
                                         </td>
                                     </tr>
+
+                                    <tr class="card-header-info">
+                                      <td>Number of customers:</td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td>Number of active customers</td>
+                                      <td></td>
+                                      <td></td>
+
+                                  </tr>
+                                  <tr class="card-header-info">
+                                      <td>{{customerCounted}} db</td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td>{{activecustomer}} db</td>
+                                      <td></td>
+                                      <td></td>
+                                  </tr>
+
                                 </tbody>
                             </table>
                         </div>
