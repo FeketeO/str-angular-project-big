@@ -107,15 +107,17 @@ export class DashboardComponent implements OnInit {
       this.productService.list$,
       this.customerService.list$,
       this.orderService.list$,
-      this.billService.billList$,
+      this.billService.getAllsum(),
+
     ]).subscribe(
       data => {
         this.cards[0].content = String(data[0].filter(o => o.active === true).length);
         this.cards[1].content = String(data[1].filter( o => o.active === true).length);
         this.cards[2].content = String(data[2].filter(o => o.status !== 'paid').length);
-        this.cards[3].content = String(data[3].filter(o => o.status !== 'paid')
-        .map(item => item.amount).length);
-
+        this.cards[3].content = String(data[3].filter(o => o.status !== 'paid').
+        map(item=>item.amount).reduce((a,b)=>a+b));
+       
+      
 
 
         const allOrders: number = data[2].length;
@@ -140,6 +142,10 @@ export class DashboardComponent implements OnInit {
     this.orderService.getAll();
     this.customerService.getAll();
     this.billService.getAll();
+
+    this.billService.getAllsum();
+
+
   }
 
 
