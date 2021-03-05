@@ -22,6 +22,13 @@ export class CustomerService {
     )
   }
 
+  list2$:Observable<Customer[]>=this.getAllsum();
+
+ getAllsum(): Observable<Customer[]> {
+    return this.http.get<Customer[]>(this.apiUrl);
+
+  }
+
   get(id: number): Observable<Customer> {
    id = typeof id === 'string' ? parseInt(id, 10) : id;
    if (id!=0){
