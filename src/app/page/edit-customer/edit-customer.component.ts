@@ -47,10 +47,10 @@ export class EditCustomerComponent implements OnInit {
   }
 
   showSuccess(): void {
-    this.mytoastr.showSuccess();
+    this.mytoaster.showSuccess();
   }
 
   showError(): void {
-    this.mytoastr.showError();
+    this.mytoaster.showError();
   }
 }

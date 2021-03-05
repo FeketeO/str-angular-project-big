@@ -117,6 +117,7 @@ export class DashboardComponent implements OnInit {
         .map(item => item.amount).length);
 
 
+
         const allOrders: number = data[2].length;
         const newOrders: number = data[2].filter( o=> o.status === 'new').length;
         const shippedOrders: number = data[2].filter( o=> o.status === 'shipped').length;
