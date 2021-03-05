@@ -6,6 +6,8 @@ import { NgForm } from '@angular/forms';
 
 import { Customer } from 'src/app/model/customer';
 import { CustomerService } from '../../service/customer.service';
+import { MytoastrService } from 'src/app/service/mytoastr.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -22,7 +24,8 @@ export class EditCustomerComponent implements OnInit {
   private customerService: CustomerService,
   private router: Router,
   private activatedRoute: ActivatedRoute,
-
+  private toaster: ToastrService,
+  private mytoaster:MytoastrService,
 
   ) { }
 
@@ -41,5 +44,13 @@ export class EditCustomerComponent implements OnInit {
     }
     this.router.navigate(['customer'])
 
+  }
+
+  showSuccess(): void {
+    this.mytoaster.showSuccess();
+  }
+
+  showError(): void {
+    this.mytoaster.showError();
   }
 }
